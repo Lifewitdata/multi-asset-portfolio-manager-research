@@ -1,0 +1,16 @@
+table,rows,rows_changed,rows_materially_changed,columns_materially_changed,max_abs_diff
+assets,10,0,0,,0.0
+daily_prices,30390,9,9,adjusted_close,0.15417480468752842
+daily_macro,6042,0,0,,0.0
+monthly_returns,144,2,2,MINT,0.0015989325880740998
+portfolio_returns,648,117,0,,6.278938965986747e-10
+weights,4536,299,0,,3.6003960923736145e-10
+portfolio_metrics,6,3,0,,2.3722340758425275e-10
+fund_metrics,2,1,1,active_month_hit_rate;annual_mean_active_return;annual_volatility;information_ratio;sharpe_cash_proxy;tracking_error,0.006944444444444531
+rolling_fund_metrics,218,2,2,active_month_hit_rate;annual_mean_active_return;annual_volatility;cagr;information_ratio;sharpe_cash_proxy;tracking_error,0.20337339477510175
+factor_coefficients,8,4,4,ci_high;ci_low;coefficient;pvalue_hac;r_squared,0.0117548036280746
+rate_sensitivity,4,1,1,pvalue_hac;r_squared;return_per_1pp_yield_change,0.02104053957946206
+volatility_scores,4,0,0,,1.0408340855860843e-16
+monthly_prices,145,1,1,MINT,0.15417480468752842
+monthly_macro,145,0,0,,0.0
+volatility_predictions,388,0,0,,9.992007221626409e-16

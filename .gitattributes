@@ -1,0 +1,7 @@
+# Generated reports and processed data are hashed byte for byte, so line endings are content.
+* text=auto eol=lf
+# Windows PowerShell 5.1 is happiest with its own line endings.
+*.ps1 text eol=crlf
+*.webp binary
+*.png binary
+*.ipynb text eol=lf

@@ -2,6 +2,8 @@
 
 All return, volatility, weight and alpha fields use **decimal units** (0.05 = 5%) unless stated otherwise. Dates in monthly tables are calendar month end, based on the last available trading observation. Every file below is generated locally.
 
+Field-level source, formula, units, null rule, owner and verification status are in the [field catalog](field_catalog.md). Source permissions and unknowns are in the [data usage register](data_usage_register.md).
+
 | Dataset | Grain / key | Meaning |
 |---|---|---|
 | `raw/prices.csv` | date, ticker | Positive daily `adjusted_close`, USD market-price basis |

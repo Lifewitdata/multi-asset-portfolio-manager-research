@@ -40,3 +40,22 @@ def test_tampered_cache_rejected(tmp_path):
 def test_provider_error():
     with pytest.raises(ValueError,match="Yahoo error"):
         parse_yahoo(json.dumps({"chart":{"error":"Unavailable"}}),"SPY")
+
+def freeze(prices, ticker, start, end):
+    p=prices.copy()
+    mask=(p.ticker==ticker)&p.date.between(start,end)
+    p.loc[mask,"adjusted_close"]=p.loc[mask,"adjusted_close"].iloc[0]
+    return p
+
+def test_frozen_price_rejected(daily_prices):
+    # Rows keep arriving and the last observation is on time, so the month-end gap check passes.
+    p=freeze(daily_prices,"MINT","2025-11-14","2025-11-28")
+    with pytest.raises(ValueError,match="stale feed: MINT"):monthly_prices(p)
+
+def test_short_repeat_allowed(daily_prices):
+    validate_prices(freeze(daily_prices,"MINT","2025-11-14","2025-11-21"))
+
+def test_cash_override(daily_prices):
+    validate_prices(freeze(daily_prices,"BIL","2016-08-03","2016-08-17"))
+    with pytest.raises(ValueError,match="stale feed: BIL"):
+        validate_prices(freeze(daily_prices,"BIL","2016-08-01","2016-08-31"))

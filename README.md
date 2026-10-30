@@ -8,10 +8,16 @@ A Python, SQL Server and Dash research project using **real historical prices** 
 
 - [Research notebook: EDA, allocation, fund evaluation and forecasting](notebooks/01_multi_asset_research.ipynb)
 - [Measured findings from the historical run](reports/historical_research_brief.md)
+- [Source-to-screen calculation evidence](reports/calculation_evidence.md) — three metrics traced from the provider payload to the rendered Dash widget
+- [CSV vs SQL Server reconciliation](reports/reconciliation/summary.json) — keyed, column-level, 1e-12 tolerance
+- [Field catalog](docs/field_catalog.md) — 118 fields with formula, units, null rules, owner and verification status
+- [Data usage register](docs/data_usage_register.md) — what each source permits, and what is still unknown
 - [Windows 11 / Python 3.11 / SQL Server instructions](docs/windows_setup.md)
 - [Methods and limitations](docs/methodology.md)
 - [Source provenance and data handling](docs/data_sources.md)
 - [Validation status](docs/validation.md)
+- [INC-001: simulated stale MINT price](docs/incidents/INC-001-stale-mint-price.md) — reproduced detection gap
+- [AI-assisted field mapping, reviewed](docs/ai_field_mapping.md)
 
 ![Historical portfolio dashboard](docs/screenshots/dashboard-desktop.webp)
 
@@ -19,7 +25,7 @@ A Python, SQL Server and Dash research project using **real historical prices** 
 
 | Area | Implementation |
 |---|---|
-| Python / SQL data handling | Downloaded payload cache, SHA-256 provenance, duplicate and coverage checks, SQL Server primary keys, constraints, indexes and transactional upserts |
+| Python / SQL data handling | Downloaded payload cache, SHA-256 provenance, duplicate, coverage and stale-run checks, SQL Server primary keys, constraints, indexes, transactional upserts, and column-level reconciliation that rolls the load back on any mismatch |
 | Asset allocation | Conservative, Balanced and Growth equity budgets; CVXPY minimum variance with Ledoit–Wolf covariance and explicit exposure limits |
 | Backtesting | Prior-month training only, drifting holdings, monthly rebalance, initial entry and subsequent trading costs |
 | Fund evaluation | BOND/AGG and MINT/BIL comparisons, CAGR, drawdown, tracking error, information ratio and rolling 36-month metrics |
@@ -58,7 +64,12 @@ The executed notebook is saved locally to `reports/local/executed_research.ipynb
 
 ## SQL Server
 
-Create a dedicated `MultiAssetResearch` database, install `.[sqlserver]`, set `MULTI_ASSET_SQLSERVER_URL`, and run `python -m multi_asset.database`. The loader creates the `research` schema and reconciles all loaded row counts in one transaction. Rerunning updates existing keys without adding duplicates.
+Create a dedicated `MultiAssetResearch` database, install `.[sqlserver]`, set `MULTI_ASSET_SQLSERVER_URL`, and run `python -m multi_asset.database`. The loader creates the `research` schema, then reconciles row counts **and every stored cell** against the frames it loaded, inside one transaction that rolls back on any difference. Rerunning updates existing keys without adding duplicates.
+
+```bash
+python -m multi_asset.reconcile --output reports/reconciliation   # CSV vs SQL Server, cell by cell
+python -m multi_asset.evidence                                    # source-to-screen trace of 3 metrics
+```
 
 Dash defaults to CSVs. Set `MULTI_ASSET_DASH_SOURCE=sqlserver` **before starting Dash** to query SQL Server instead. Tables are read at application startup; restart Dash after a refresh. See the [exact commands](docs/windows_setup.md).
 
@@ -70,16 +81,16 @@ The lowest observed walk-forward volatility MAE belonged to Random Forest in thi
 
 ## Repository map
 
-- `src/multi_asset/`: ingestion, validation, analytics, allocation, forecasting, pipeline, Dash, SQL adapter and AI evidence validation.
+- `src/multi_asset/`: ingestion, validation, analytics, allocation, forecasting, pipeline, Dash, SQL adapter, CSV/SQL reconciliation, source-to-screen evidence and AI evidence validation.
 - `notebooks/`: complete research walkthrough with EDA and charts.
-- `sql/`: schema, indexes, allocation and leakage checks, rolling-return queries.
+- `sql/`: schema, indexes, allocation and leakage checks, rolling-return queries, read-only stale-feed diagnostics.
 - `tests/`: deterministic **synthetic unit fixtures only**; production research never falls back to synthetic observations.
-- `reports/`: checked-in aggregate brief and source manifest; local reports are ignored by git.
-- `docs/`: setup, methodology, data dictionary and validation evidence.
-- `scripts/`: notebook execution and Windows refresh automation.
+- `reports/`: checked-in aggregate brief, source manifest, reconciliation and incident exports; local reports are ignored by git.
+- `docs/`: setup, methodology, field catalog, data dictionary, data usage register, incident record, validation evidence.
+- `scripts/`: notebook execution, Windows refresh automation, stale-price fault injection, AI field-mapping checker.
 
 ## Limits
 
 Surviving instruments were selected retrospectively. Market-price histories can be revised and are not point-in-time snapshots. Fund comparisons use ETF proxies, not official index returns; MINT has risks not captured by Treasury bills. Its benchmark alpha/beta are deliberately undefined when BIL is also the cash proxy. The credit factor is not duration-neutral. No taxes, intramonth drawdowns, market impact, FX hedges or verified manager-tenure attribution are included.
 
-SQL Server code is supplied, but live Windows/ODBC integration must be verified on the user's machine. AI support is a manual research-review workflow, not a claimed live API integration. This is a research prototype, not investment advice or production portfolio management software.
+SQL Server integration is verified on one Windows 11 machine with SQL Server 2025 Developer, with dated results in [validation.md](docs/validation.md); it has not been run against a deployed server. The checked-in evidence in `reports/reconciliation/` and `reports/calculation_evidence.md` was generated there, against a scratch database rebuilt from the current CSVs. AI support is a manual research-review workflow with no API call, plus one [documented, unapproved draft mapping](docs/ai_field_mapping.md). This is a research prototype, not investment advice or production portfolio management software.

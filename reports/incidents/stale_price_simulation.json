@@ -1,0 +1,82 @@
+{
+  "simulated": true,
+  "ticker": "MINT",
+  "frozen_close": 96.82756042480467,
+  "frozen_from": "2025-11-14",
+  "freeze_start": "2025-11-17",
+  "freeze_end": "2025-11-28",
+  "frozen_rows": 9,
+  "true_closes": {
+    "2025-11-17": 96.83721923828124,
+    "2025-11-18": 96.86611938476562,
+    "2025-11-19": 96.8564682006836,
+    "2025-11-20": 96.8564682006836,
+    "2025-11-21": 96.90464782714844,
+    "2025-11-24": 96.9239273071289,
+    "2025-11-25": 96.93356323242188,
+    "2025-11-26": 96.97210693359376,
+    "2025-11-28": 96.9817352294922
+  },
+  "checks_before_fix": "PASS: checksums, duplicate keys, full cross-section, positive finite prices, month-end gap <= 7 days",
+  "check_after_fix": "REJECTED: Possible stale feed: MINT close 96.82756042480467 repeated for 9 trading days (2025-11-17 to 2025-11-28); 1 run(s) over limit. See docs/incidents/",
+  "longest_runs": {
+    "AGG": 2,
+    "BIL": 10,
+    "BOND": 2,
+    "EEM": 1,
+    "EFA": 1,
+    "GLD": 1,
+    "IEF": 2,
+    "LQD": 1,
+    "MINT": 9,
+    "SPY": 1
+  },
+  "control_vs_committed_baseline_max_abs_diff": {},
+  "impact": {
+    "MINT 2025-11 monthly return": {
+      "clean": 0.0033893900779176,
+      "stale": 0.001794271544776
+    },
+    "MINT 2025-12 monthly return": {
+      "clean": 0.0041896411070523,
+      "stale": 0.0057885736951264
+    },
+    "MINT tracking_error vs BIL": {
+      "clean": 0.0117272674629084,
+      "stale": 0.011749208732978
+    },
+    "MINT information_ratio": {
+      "clean": 0.4966643025962228,
+      "stale": 0.495763849814545
+    },
+    "MINT annual_mean_active_return": {
+      "clean": 0.0058245151158248,
+      "stale": 0.0058248329537358
+    },
+    "MINT active_month_hit_rate": {
+      "clean": 0.7708333333333334,
+      "stale": 0.7638888888888888
+    }
+  },
+  "tables_materially_changed": [
+    "daily_prices",
+    "monthly_returns",
+    "fund_metrics",
+    "rolling_fund_metrics",
+    "factor_coefficients",
+    "rate_sensitivity",
+    "monthly_prices"
+  ],
+  "tables_with_noise_only": [
+    "portfolio_returns",
+    "weights",
+    "portfolio_metrics"
+  ],
+  "tables_unchanged": [
+    "assets",
+    "daily_macro",
+    "volatility_scores",
+    "monthly_macro",
+    "volatility_predictions"
+  ]
+}

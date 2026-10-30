@@ -16,3 +16,7 @@ START = "2013-12-01"
 END = "2025-12-31"
 LOOKBACK = 36
 COST_BPS = 10.0  # per dollar traded; charge buys AND sells, not half-turnover
+# Max consecutive trading days a close may repeat the previous close. Measured on the
+# 2013-2025 cache: BIL 10 (near-zero T-bill yields, Aug 2016), MINT 3, all others <= 2.
+STALE_RUN_DAYS = 5
+STALE_RUN_OVERRIDES = {"BIL": 15}

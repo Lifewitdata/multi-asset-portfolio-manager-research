@@ -11,6 +11,8 @@ Study dates are fixed in `config.py`: December 2013 supplies base prices; return
 
 Downloads are cached under `data/raw/` and ignored by git. Adjusted close is specifically requested; unadjusted close is not silently substituted. See [Yahoo's adjustment definition](https://in.help.yahoo.com/kb/adjusted-close-sln28256.html). The unofficial chart endpoint may change, rate-limit, or become unavailable; retries are bounded and failure is explicit.
 
+A delivered history that stops moving counts as a failure too. Ingestion rejects any ticker whose adjusted close repeats for longer than that ticker ever legitimately did in the study window (`STALE_RUN_DAYS`, with a measured override for BIL), because a frozen series passes every other check. See [INC-001](incidents/INC-001-stale-mint-price.md) for the reproduced gap and the diagnostics.
+
 FRED source pages: [DGS10](https://fred.stlouisfed.org/series/DGS10), [DGS2](https://fred.stlouisfed.org/series/DGS2). Values are percent, not decimal returns. Provider data may be revised; downloaded histories are not vintage datasets.
 
 ## Fund identities and comparator rationale
@@ -25,6 +27,6 @@ AGG is an investable core-bond comparator for BOND; BIL is a conservative cash-l
 
 ## Use and redistribution
 
-Accessibility does not imply unrestricted redistribution. This repository supplies retrieval code and derived aggregate findings; it does not commit provider payloads, full price/return tables, or an API key. Data rights remain with their respective owners. Review provider terms before redistributing data, deploying a public feed, or commercial use. No third-party market-data license is granted by this repository.
+Accessibility does not imply unrestricted redistribution. This repository supplies retrieval code and derived aggregate findings; it does not commit provider payloads, full price/return tables, or an API key. A small number of individual observations are quoted as calculation and incident evidence; the [data usage register](data_usage_register.md) lists them, together with each provider's published terms, the permission status and open unknowns. Data rights remain with their respective owners. Review provider terms before redistributing data, deploying a public feed, or commercial use. No third-party market-data license is granted by this repository.
 
 Synthetic data appear only in deterministic unit tests, explicitly labelled as fixtures. Production ingestion has no synthetic fallback.

@@ -1,0 +1,186 @@
+{
+  "generated_utc": "2026-10-30T17:05:34+00:00",
+  "target": "MultiAssetResearch_Verify@localhost (injected faults, rolled back)",
+  "abs_tolerance": 1e-12,
+  "rel_tolerance": 1e-12,
+  "tables": [
+    {
+      "table": "assets",
+      "keys": [
+        "ticker"
+      ],
+      "source_rows": 10,
+      "target_rows": 10,
+      "matched_rows": 10,
+      "value_columns": 2,
+      "cells_compared": 20,
+      "max_abs_diff": 0.0,
+      "mismatches": 0,
+      "status": "PASS"
+    },
+    {
+      "table": "daily_prices",
+      "keys": [
+        "date",
+        "ticker"
+      ],
+      "source_rows": 30390,
+      "target_rows": 30390,
+      "matched_rows": 30390,
+      "value_columns": 1,
+      "cells_compared": 30390,
+      "max_abs_diff": 9.698173641936592e-08,
+      "mismatches": 1,
+      "status": "FAIL"
+    },
+    {
+      "table": "daily_macro",
+      "keys": [
+        "date",
+        "series"
+      ],
+      "source_rows": 6042,
+      "target_rows": 6042,
+      "matched_rows": 6042,
+      "value_columns": 1,
+      "cells_compared": 6042,
+      "max_abs_diff": 0.0,
+      "mismatches": 0,
+      "status": "PASS"
+    },
+    {
+      "table": "monthly_returns",
+      "keys": [
+        "date"
+      ],
+      "source_rows": 144,
+      "target_rows": 144,
+      "matched_rows": 144,
+      "value_columns": 10,
+      "cells_compared": 1440,
+      "max_abs_diff": 0.0,
+      "mismatches": 0,
+      "status": "PASS"
+    },
+    {
+      "table": "portfolio_returns",
+      "keys": [
+        "date",
+        "portfolio"
+      ],
+      "source_rows": 648,
+      "target_rows": 648,
+      "matched_rows": 648,
+      "value_columns": 7,
+      "cells_compared": 4536,
+      "max_abs_diff": 0.0,
+      "mismatches": 0,
+      "status": "PASS"
+    },
+    {
+      "table": "weights",
+      "keys": [
+        "date",
+        "portfolio",
+        "ticker"
+      ],
+      "source_rows": 4536,
+      "target_rows": 4535,
+      "matched_rows": 4535,
+      "value_columns": 1,
+      "cells_compared": 4535,
+      "max_abs_diff": 0.0,
+      "mismatches": 1,
+      "status": "FAIL"
+    },
+    {
+      "table": "portfolio_metrics",
+      "keys": [
+        "portfolio"
+      ],
+      "source_rows": 6,
+      "target_rows": 6,
+      "matched_rows": 6,
+      "value_columns": 13,
+      "cells_compared": 78,
+      "max_abs_diff": 0.0,
+      "mismatches": 0,
+      "status": "PASS"
+    },
+    {
+      "table": "fund_metrics",
+      "keys": [
+        "fund"
+      ],
+      "source_rows": 2,
+      "target_rows": 2,
+      "matched_rows": 2,
+      "value_columns": 13,
+      "cells_compared": 26,
+      "max_abs_diff": 9.99999999999994e-05,
+      "mismatches": 1,
+      "status": "FAIL"
+    },
+    {
+      "table": "rolling_fund_metrics",
+      "keys": [
+        "date",
+        "fund"
+      ],
+      "source_rows": 218,
+      "target_rows": 218,
+      "matched_rows": 218,
+      "value_columns": 12,
+      "cells_compared": 2616,
+      "max_abs_diff": 0.0,
+      "mismatches": 0,
+      "status": "PASS"
+    },
+    {
+      "table": "factor_coefficients",
+      "keys": [
+        "fund",
+        "term"
+      ],
+      "source_rows": 8,
+      "target_rows": 8,
+      "matched_rows": 8,
+      "value_columns": 6,
+      "cells_compared": 48,
+      "max_abs_diff": 0.0,
+      "mismatches": 0,
+      "status": "PASS"
+    },
+    {
+      "table": "rate_sensitivity",
+      "keys": [
+        "fund"
+      ],
+      "source_rows": 4,
+      "target_rows": 4,
+      "matched_rows": 4,
+      "value_columns": 3,
+      "cells_compared": 12,
+      "max_abs_diff": 0.0,
+      "mismatches": 0,
+      "status": "PASS"
+    },
+    {
+      "table": "volatility_scores",
+      "keys": [
+        "model"
+      ],
+      "source_rows": 4,
+      "target_rows": 4,
+      "matched_rows": 4,
+      "value_columns": 3,
+      "cells_compared": 12,
+      "max_abs_diff": 0.0,
+      "mismatches": 0,
+      "status": "PASS"
+    }
+  ],
+  "total_cells_compared": 49755,
+  "total_mismatches": 3,
+  "status": "FAIL"
+}

@@ -1,4 +1,4 @@
-"""SQL Server persistence with validated staging, transactional MERGE and count checks."""
+"""SQL Server persistence with validated staging, transactional MERGE, count and column-level value checks."""
 import os
 import re
 import uuid
@@ -6,6 +6,7 @@ import pandas as pd
 from sqlalchemy import create_engine, text
 from .config import ROOT
 from .data import load, verify_processed
+from .reconcile import reconcile, export
 
 # Names are constants, never derived from user input.
 KEYS={"assets":["ticker"],"daily_prices":["date","ticker"],"daily_macro":["date","series"],
@@ -55,7 +56,12 @@ def load_sqlserver():
                 if actual!=len(frame):raise ValueError(f"Count mismatch {name}: expected {len(frame)}, got {actual}; transaction rolled back")
                 conn.exec_driver_sql(f"DROP TABLE research.[{stage}]")
                 print(f"{name}: {actual}")
-        print("SQL Server load committed; all table counts reconciled.")
+            summaries,mismatches=reconcile(frames,lambda n:pd.read_sql(text(f"SELECT * FROM research.[{n}]"),conn),KEYS)
+            report=export(summaries,mismatches)
+            if report["status"]!="PASS":
+                raise ValueError(f"{report['total_mismatches']} column-level mismatches; transaction rolled back. See reports/local/reconciliation/mismatches.csv")
+            print(f"Column-level reconciliation: {report['total_cells_compared']} cells, 0 mismatches.")
+        print("SQL Server load committed; all table counts and values reconciled.")
     finally:db.dispose()
 
 def read_dashboard(names):

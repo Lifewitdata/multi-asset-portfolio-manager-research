@@ -22,6 +22,9 @@ def metrics(returns, benchmark, cash):
         x = sm.add_constant((b-c).rename("benchmark_excess"), has_constant="add")
         fit = sm.OLS(excess, x).fit(cov_type="HAC", cov_kwds={"maxlags": 3})
         alpha, alpha_pvalue, beta = fit.params["const"]*12, fit.pvalues["const"], fit.params["benchmark_excess"]
+        # A portfolio identical to its comparator fits exactly; the intercept p-value is then rounding noise.
+        if te <= 1e-12:
+            alpha_pvalue = np.nan
     return {"months": len(r), "cagr": (1+r).prod()**(12/len(r))-1,
             "annual_volatility": vol, "maximum_drawdown": drawdown(r).min(),
             "sharpe_cash_proxy": excess.mean()*12/vol if vol > 1e-12 else np.nan,

@@ -21,6 +21,9 @@ def test_identical_benchmark_zero_te(returns):
     m=metrics(returns.SPY,returns.SPY,returns.BIL)
     assert m["tracking_error"]==0
     assert np.isnan(m["information_ratio"])
+    # Exact fit: a p-value here would be rounding noise (it was 3.7e-7 for Growth Policy before the fix).
+    assert np.isnan(m["alpha_pvalue_hac"])
+    assert abs(m["alpha_annual"])<1e-12 and m["beta"]==pytest.approx(1)
 
 def test_cash_benchmark_no_spurious_alpha(returns):
     m=metrics(returns.MINT,returns.BIL,returns.BIL)

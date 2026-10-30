@@ -10,7 +10,7 @@ from pathlib import Path
 from zoneinfo import ZoneInfo
 import numpy as np
 import pandas as pd
-from .config import ROOT, ASSETS, MACRO, START, END
+from .config import ROOT, ASSETS, MACRO, START, END, STALE_RUN_DAYS, STALE_RUN_OVERRIDES
 
 def download(url):
     error = None
@@ -52,7 +52,35 @@ def validate_prices(prices):
     p["adjusted_close"] = values
     if (p.date > pd.Timestamp(END)).any() or (p.date < pd.Timestamp(START)).any():
         raise ValueError("Prices outside fixed study period")
-    return p.sort_values(["date", "ticker"]).reset_index(drop=True)
+    p = p.sort_values(["date", "ticker"]).reset_index(drop=True)
+    check_unchanged_runs(p)
+    return p
+
+def unchanged_runs(prices):
+    """Runs of consecutive trading days whose close equals the previous day's close."""
+    rows = []
+    for ticker, group in prices.sort_values("date").groupby("ticker"):
+        same = group.adjusted_close.diff().eq(0).to_numpy()
+        dates, values = group.date.to_numpy(), group.adjusted_close.to_numpy()
+        start = None
+        for i, flag in enumerate(np.append(same, False)):
+            if flag and start is None:
+                start = i
+            elif not flag and start is not None:
+                rows.append({"ticker": ticker, "first_repeat": pd.Timestamp(dates[start]), "last_repeat": pd.Timestamp(dates[i-1]),
+                             "repeated_days": i-start, "value": float(values[start])})
+                start = None
+    return pd.DataFrame(rows, columns=["ticker", "first_repeat", "last_repeat", "repeated_days", "value"])
+
+def check_unchanged_runs(prices):
+    """A provider can keep publishing rows while repeating a frozen price; row and gap checks cannot see that."""
+    runs = unchanged_runs(prices)
+    limit = runs.ticker.map(lambda t: STALE_RUN_OVERRIDES.get(t, STALE_RUN_DAYS))
+    bad = runs[runs.repeated_days > limit]
+    if not bad.empty:
+        r = bad.iloc[0]
+        raise ValueError(f"Possible stale feed: {r.ticker} close {r.value} repeated for {r.repeated_days} trading days "
+                         f"({r.first_repeat:%Y-%m-%d} to {r.last_repeat:%Y-%m-%d}); {len(bad)} run(s) over limit. See docs/incidents/")
 
 def monthly_prices(prices):
     prices = validate_prices(prices)

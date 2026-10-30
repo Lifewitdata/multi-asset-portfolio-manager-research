@@ -1,0 +1,516 @@
+table,key,column,issue,source_value,target_value,abs_diff,tolerance
+daily_prices,"{""date"": ""2025-11-17"", ""ticker"": ""MINT""}",adjusted_close,value_diff,96.83721923828124,96.82756042480467,0.0096588134765625,9.783721923828123e-11
+daily_prices,"{""date"": ""2025-11-18"", ""ticker"": ""MINT""}",adjusted_close,value_diff,96.86611938476562,96.82756042480467,0.03855895996095171,9.786611938476562e-11
+daily_prices,"{""date"": ""2025-11-19"", ""ticker"": ""MINT""}",adjusted_close,value_diff,96.8564682006836,96.82756042480467,0.02890777587892046,9.785646820068358e-11
+daily_prices,"{""date"": ""2025-11-20"", ""ticker"": ""MINT""}",adjusted_close,value_diff,96.8564682006836,96.82756042480467,0.02890777587892046,9.785646820068358e-11
+daily_prices,"{""date"": ""2025-11-21"", ""ticker"": ""MINT""}",adjusted_close,value_diff,96.90464782714844,96.82756042480467,0.07708740234376421,9.790464782714844e-11
+daily_prices,"{""date"": ""2025-11-24"", ""ticker"": ""MINT""}",adjusted_close,value_diff,96.9239273071289,96.82756042480467,0.09636688232423296,9.79239273071289e-11
+daily_prices,"{""date"": ""2025-11-25"", ""ticker"": ""MINT""}",adjusted_close,value_diff,96.93356323242188,96.82756042480467,0.10600280761720171,9.793356323242187e-11
+daily_prices,"{""date"": ""2025-11-26"", ""ticker"": ""MINT""}",adjusted_close,value_diff,96.97210693359376,96.82756042480467,0.14454650878909092,9.797210693359375e-11
+daily_prices,"{""date"": ""2025-11-28"", ""ticker"": ""MINT""}",adjusted_close,value_diff,96.9817352294922,96.82756042480467,0.15417480468752842,9.79817352294922e-11
+monthly_returns,"{""date"": ""2025-11-30""}",MINT,value_diff,0.0033893900779176,0.001794271544776,0.0015951185331415998,1.0033893900779175e-12
+monthly_returns,"{""date"": ""2025-12-31""}",MINT,value_diff,0.0041896411070523,0.0057885736951264,0.0015989325880740998,1.0041896411070523e-12
+portfolio_returns,"{""date"": ""2018-02-28"", ""portfolio"": ""Balanced Optimized""}",gross_return,value_diff,-0.024764695792951,-0.0247646957967282,3.7772007743797076e-12,1.024764695792951e-12
+portfolio_returns,"{""date"": ""2018-05-31"", ""portfolio"": ""Balanced Optimized""}",gross_return,value_diff,0.0091219873197701,0.0091219873158818,3.888301139398642e-12,1.0091219873197701e-12
+portfolio_returns,"{""date"": ""2018-06-30"", ""portfolio"": ""Balanced Optimized""}",gross_return,value_diff,2.5521728776715816e-05,2.552171928836539e-05,9.488350426536951e-12,1.0000255217287767e-12
+portfolio_returns,"{""date"": ""2018-09-30"", ""portfolio"": ""Growth Optimized""}",gross_return,value_diff,0.0034723073080338,0.0034723073090924,1.0586002560653007e-12,1.0034723073080338e-12
+portfolio_returns,"{""date"": ""2019-04-30"", ""portfolio"": ""Growth Optimized""}",gross_return,value_diff,0.0269486059906417,0.0269486059893223,1.3193994508053919e-12,1.0269486059906417e-12
+portfolio_returns,"{""date"": ""2019-05-31"", ""portfolio"": ""Growth Optimized""}",gross_return,value_diff,-0.0398940066962315,-0.0398940067011802,4.948701171070269e-12,1.0398940066962314e-12
+portfolio_returns,"{""date"": ""2019-07-31"", ""portfolio"": ""Growth Optimized""}",gross_return,value_diff,-0.0048144889918551,-0.0048144889946872,2.8321000059006174e-12,1.0048144889918552e-12
+portfolio_returns,"{""date"": ""2020-02-29"", ""portfolio"": ""Conservative Optimized""}",gross_return,value_diff,-0.003932990399766,-0.0039329903977167,2.0492999658339173e-12,1.003932990399766e-12
+portfolio_returns,"{""date"": ""2020-11-30"", ""portfolio"": ""Conservative Optimized""}",gross_return,value_diff,0.0388719003605087,0.0388719003619369,1.4281978377717053e-12,1.0388719003605087e-12
+portfolio_returns,"{""date"": ""2024-04-30"", ""portfolio"": ""Balanced Optimized""}",gross_return,value_diff,-0.0189365780681485,-0.0189365780692022,1.0536987948839283e-12,1.0189365780681485e-12
+portfolio_returns,"{""date"": ""2025-04-30"", ""portfolio"": ""Conservative Optimized""}",gross_return,value_diff,0.0097338998401989,0.009733899837114,3.0849003906929795e-12,1.0097338998401989e-12
+portfolio_returns,"{""date"": ""2025-06-30"", ""portfolio"": ""Growth Optimized""}",gross_return,value_diff,0.0454953950271404,0.0454953950259806,1.1598014215685737e-12,1.0454953950271403e-12
+portfolio_returns,"{""date"": ""2025-07-31"", ""portfolio"": ""Balanced Optimized""}",gross_return,value_diff,0.006354363937346,0.0063543639409538,3.6077998227801444e-12,1.006354363937346e-12
+portfolio_returns,"{""date"": ""2018-02-28"", ""portfolio"": ""Balanced Optimized""}",net_return,value_diff,-0.0248362213926306,-0.0248362213963544,3.7237990468952376e-12,1.0248362213926306e-12
+portfolio_returns,"{""date"": ""2018-05-31"", ""portfolio"": ""Balanced Optimized""}",net_return,value_diff,0.0091008742864278,0.0091008742824694,3.958399580339389e-12,1.0091008742864278e-12
+portfolio_returns,"{""date"": ""2018-06-30"", ""portfolio"": ""Balanced Optimized""}",net_return,value_diff,-5.685708799552103e-06,-5.685718402426154e-06,9.602874051495291e-12,1.0000056857087996e-12
+portfolio_returns,"{""date"": ""2019-04-30"", ""portfolio"": ""Growth Optimized""}",net_return,value_diff,0.0268967475008832,0.026896747499286,1.5972015376952697e-12,1.0268967475008831e-12
+portfolio_returns,"{""date"": ""2019-05-31"", ""portfolio"": ""Growth Optimized""}",net_return,value_diff,-0.0399301408292934,-0.0399301408342697,4.976297152126108e-12,1.0399301408292934e-12
+portfolio_returns,"{""date"": ""2019-07-31"", ""portfolio"": ""Growth Optimized""}",net_return,value_diff,-0.0048738638452209,-0.0048738638482006,2.979699820215842e-12,1.0048738638452208e-12
+portfolio_returns,"{""date"": ""2020-02-29"", ""portfolio"": ""Conservative Optimized""}",net_return,value_diff,-0.0039921360088237,-0.0039921360068699,1.953799969034442e-12,1.0039921360088236e-12
+portfolio_returns,"{""date"": ""2020-11-30"", ""portfolio"": ""Conservative Optimized""}",net_return,value_diff,0.0388589970461661,0.0388589970475778,1.4117040869621178e-12,1.038858997046166e-12
+portfolio_returns,"{""date"": ""2024-04-30"", ""portfolio"": ""Balanced Optimized""}",net_return,value_diff,-0.0190051749036361,-0.0190051749048377,1.2016013184457108e-12,1.019005174903636e-12
+portfolio_returns,"{""date"": ""2025-04-30"", ""portfolio"": ""Conservative Optimized""}",net_return,value_diff,0.009701575691517,0.0097015756884195,3.097499687298999e-12,1.009701575691517e-12
+portfolio_returns,"{""date"": ""2025-06-30"", ""portfolio"": ""Growth Optimized""}",net_return,value_diff,0.0454619241351297,0.0454619241338474,1.2823006545481519e-12,1.0454619241351297e-12
+portfolio_returns,"{""date"": ""2025-07-31"", ""portfolio"": ""Balanced Optimized""}",net_return,value_diff,0.0061910717590287,0.0061910717627546,3.7258997970246455e-12,1.0061910717590286e-12
+portfolio_returns,"{""date"": ""2017-02-28"", ""portfolio"": ""Growth Optimized""}",traded_fraction,value_diff,0.0680093637186859,0.0680093637058811,1.2804798887877666e-11,1.0680093637186859e-12
+portfolio_returns,"{""date"": ""2017-03-31"", ""portfolio"": ""Growth Optimized""}",traded_fraction,value_diff,0.0882736923020858,0.088273692318065,1.5979204071037145e-11,1.0882736923020858e-12
+portfolio_returns,"{""date"": ""2017-04-30"", ""portfolio"": ""Conservative Optimized""}",traded_fraction,value_diff,0.0101532065586877,0.0101532065460208,1.2666900514601842e-11,1.0101532065586877e-12
+portfolio_returns,"{""date"": ""2017-04-30"", ""portfolio"": ""Growth Optimized""}",traded_fraction,value_diff,0.0135459117199251,0.0135459117175555,2.369599308438275e-12,1.013545911719925e-12
+portfolio_returns,"{""date"": ""2017-05-31"", ""portfolio"": ""Conservative Optimized""}",traded_fraction,value_diff,0.0094448847413385,0.0094448847281883,1.3150199679179408e-11,1.0094448847413385e-12
+portfolio_returns,"{""date"": ""2017-06-30"", ""portfolio"": ""Conservative Optimized""}",traded_fraction,value_diff,0.0307025302717006,0.030702530268969,2.731603138128591e-12,1.0307025302717005e-12
+portfolio_returns,"{""date"": ""2017-07-31"", ""portfolio"": ""Conservative Optimized""}",traded_fraction,value_diff,0.0079909161227538,0.0079909161213384,1.4154007826894244e-12,1.0079909161227538e-12
+portfolio_returns,"{""date"": ""2017-08-31"", ""portfolio"": ""Conservative Optimized""}",traded_fraction,value_diff,0.0158352101335014,0.0158352101320481,1.4532992864690897e-12,1.0158352101335014e-12
+portfolio_returns,"{""date"": ""2017-10-31"", ""portfolio"": ""Balanced Optimized""}",traded_fraction,value_diff,0.0698284389335659,0.0698284389310411,2.524799813663492e-12,1.0698284389335658e-12
+portfolio_returns,"{""date"": ""2017-10-31"", ""portfolio"": ""Conservative Optimized""}",traded_fraction,value_diff,0.0573570238087795,0.0573570237997064,9.073103379719782e-12,1.0573570238087795e-12
+portfolio_returns,"{""date"": ""2017-11-30"", ""portfolio"": ""Conservative Optimized""}",traded_fraction,value_diff,0.0265674114646894,0.02656741145679,7.89939988421473e-12,1.0265674114646894e-12
+portfolio_returns,"{""date"": ""2017-12-31"", ""portfolio"": ""Balanced Optimized""}",traded_fraction,value_diff,0.0191513803284688,0.0191513803298602,1.3914008833992852e-12,1.0191513803284688e-12
+portfolio_returns,"{""date"": ""2017-12-31"", ""portfolio"": ""Conservative Optimized""}",traded_fraction,value_diff,0.0183224521812724,0.0183224521784125,2.8598998169648837e-12,1.0183224521812723e-12
+portfolio_returns,"{""date"": ""2018-01-31"", ""portfolio"": ""Balanced Optimized""}",traded_fraction,value_diff,0.04406327027144,0.0440632702729499,1.5099033134902129e-12,1.04406327027144e-12
+portfolio_returns,"{""date"": ""2018-02-28"", ""portfolio"": ""Balanced Optimized""}",traded_fraction,value_diff,0.0733418892559062,0.0733418892014249,5.448130835361553e-11,1.0733418892559062e-12
+portfolio_returns,"{""date"": ""2018-02-28"", ""portfolio"": ""Conservative Optimized""}",traded_fraction,value_diff,0.0899759080807757,0.089975908077332,3.4437036555701184e-12,1.0899759080807757e-12
+portfolio_returns,"{""date"": ""2018-03-31"", ""portfolio"": ""Balanced Optimized""}",traded_fraction,value_diff,0.0398688389685812,0.0398688383406873,6.278938965986747e-10,1.0398688389685813e-12
+portfolio_returns,"{""date"": ""2018-03-31"", ""portfolio"": ""Conservative Optimized""}",traded_fraction,value_diff,0.0825566645631122,0.0825566645657898,2.677608135215337e-12,1.0825566645631121e-12
+portfolio_returns,"{""date"": ""2018-04-30"", ""portfolio"": ""Balanced Optimized""}",traded_fraction,value_diff,0.026052127500898,0.0260521274494887,5.140930042779601e-11,1.026052127500898e-12
+portfolio_returns,"{""date"": ""2018-05-31"", ""portfolio"": ""Balanced Optimized""}",traded_fraction,value_diff,0.0209221814682119,0.0209221815378884,6.967649721079106e-11,1.0209221814682118e-12
+portfolio_returns,"{""date"": ""2018-06-30"", ""portfolio"": ""Balanced Optimized""}",traded_fraction,value_diff,0.0312066411288828,0.0312066412436776,1.1479479866682851e-10,1.0312066411288828e-12
+portfolio_returns,"{""date"": ""2018-06-30"", ""portfolio"": ""Conservative Optimized""}",traded_fraction,value_diff,0.0426490614748222,0.0426490614817985,6.976301480943192e-12,1.0426490614748222e-12
+portfolio_returns,"{""date"": ""2018-06-30"", ""portfolio"": ""Growth Optimized""}",traded_fraction,value_diff,0.0164434117654947,0.0164434117625909,2.9037987292479528e-12,1.0164434117654947e-12
+portfolio_returns,"{""date"": ""2018-07-31"", ""portfolio"": ""Balanced Optimized""}",traded_fraction,value_diff,0.0119098530082804,0.0119098535324643,5.241838994113346e-10,1.0119098530082804e-12
+portfolio_returns,"{""date"": ""2018-07-31"", ""portfolio"": ""Conservative Optimized""}",traded_fraction,value_diff,0.0168809800282902,0.0168809800310947,2.8044996880360884e-12,1.0168809800282901e-12
+portfolio_returns,"{""date"": ""2018-08-31"", ""portfolio"": ""Balanced Optimized""}",traded_fraction,value_diff,0.0189155802328019,0.0189155801430938,8.970810205788382e-11,1.0189155802328018e-12
+portfolio_returns,"{""date"": ""2018-09-30"", ""portfolio"": ""Balanced Optimized""}",traded_fraction,value_diff,0.0584097969592658,0.0584097969431645,1.6101300848170297e-11,1.0584097969592657e-12
+portfolio_returns,"{""date"": ""2018-09-30"", ""portfolio"": ""Growth Optimized""}",traded_fraction,value_diff,0.0277817721480087,0.0277817726779681,5.299594027508014e-10,1.0277817721480086e-12
+portfolio_returns,"{""date"": ""2018-10-31"", ""portfolio"": ""Balanced Optimized""}",traded_fraction,value_diff,0.0306197874210396,0.0306197874647424,4.370279832466295e-11,1.0306197874210396e-12
+portfolio_returns,"{""date"": ""2018-10-31"", ""portfolio"": ""Growth Optimized""}",traded_fraction,value_diff,0.0420835772205843,0.0420835766703456,5.502386948852411e-10,1.0420835772205843e-12
+portfolio_returns,"{""date"": ""2018-11-30"", ""portfolio"": ""Balanced Optimized""}",traded_fraction,value_diff,0.1051616986766206,0.1051616986636241,1.2996506648654815e-11,1.1051616986766206e-12
+portfolio_returns,"{""date"": ""2018-11-30"", ""portfolio"": ""Growth Optimized""}",traded_fraction,value_diff,0.095767456345579,0.095767456346734,1.1550066458809738e-12,1.095767456345579e-12
+portfolio_returns,"{""date"": ""2018-12-31"", ""portfolio"": ""Balanced Optimized""}",traded_fraction,value_diff,0.0343828132754872,0.0343828132807583,5.2710960596336065e-12,1.0343828132754872e-12
+portfolio_returns,"{""date"": ""2018-12-31"", ""portfolio"": ""Conservative Optimized""}",traded_fraction,value_diff,0.0288596463789597,0.028859646382975,4.01530197979838e-12,1.0288596463789596e-12
+portfolio_returns,"{""date"": ""2018-12-31"", ""portfolio"": ""Growth Optimized""}",traded_fraction,value_diff,0.0363901338664832,0.0363901338741054,7.622194542200589e-12,1.0363901338664832e-12
+portfolio_returns,"{""date"": ""2019-01-31"", ""portfolio"": ""Balanced Optimized""}",traded_fraction,value_diff,0.1381438377689951,0.1381438377664191,2.576022728462135e-12,1.138143837768995e-12
+portfolio_returns,"{""date"": ""2019-01-31"", ""portfolio"": ""Conservative Optimized""}",traded_fraction,value_diff,0.0459210725898548,0.0459210725630576,2.679719640630296e-11,1.0459210725898549e-12
+portfolio_returns,"{""date"": ""2019-02-28"", ""portfolio"": ""Balanced Optimized""}",traded_fraction,value_diff,0.1007173777313992,0.1007173777375585,6.1592952960154435e-12,1.1007173777313991e-12
+portfolio_returns,"{""date"": ""2019-02-28"", ""portfolio"": ""Conservative Optimized""}",traded_fraction,value_diff,0.1110829459883778,0.1110829459520105,3.6367298061890097e-11,1.1110829459883778e-12
+portfolio_returns,"{""date"": ""2019-02-28"", ""portfolio"": ""Growth Optimized""}",traded_fraction,value_diff,0.1337666894388699,0.1337666893987013,4.0168618431479786e-11,1.1337666894388698e-12
+portfolio_returns,"{""date"": ""2019-03-31"", ""portfolio"": ""Balanced Optimized""}",traded_fraction,value_diff,0.0636334986453145,0.0636334986418082,3.5063063563711694e-12,1.0636334986453144e-12
+portfolio_returns,"{""date"": ""2019-03-31"", ""portfolio"": ""Conservative Optimized""}",traded_fraction,value_diff,0.0277017297230488,0.0277017297121905,1.085830036995361e-11,1.0277017297230488e-12
+portfolio_returns,"{""date"": ""2019-03-31"", ""portfolio"": ""Growth Optimized""}",traded_fraction,value_diff,0.0860721636475591,0.0860721636968525,4.929340269299587e-11,1.086072163647559e-12
+portfolio_returns,"{""date"": ""2019-04-30"", ""portfolio"": ""Balanced Optimized""}",traded_fraction,value_diff,0.0182893563062016,0.0182893563022351,3.966497269525249e-12,1.0182893563062016e-12
+portfolio_returns,"{""date"": ""2019-04-30"", ""portfolio"": ""Conservative Optimized""}",traded_fraction,value_diff,0.1071935494141339,0.1071935494239901,9.856199190139137e-12,1.1071935494141339e-12
+portfolio_returns,"{""date"": ""2019-04-30"", ""portfolio"": ""Growth Optimized""}",traded_fraction,value_diff,0.0504976485248122,0.0504976487955071,2.7069489705322525e-10,1.0504976485248121e-12
+portfolio_returns,"{""date"": ""2019-05-31"", ""portfolio"": ""Balanced Optimized""}",traded_fraction,value_diff,0.0215034260907085,0.0215034260978817,7.173199534360464e-12,1.0215034260907085e-12
+portfolio_returns,"{""date"": ""2019-05-31"", ""portfolio"": ""Conservative Optimized""}",traded_fraction,value_diff,0.0183072876044586,0.0183072876019917,2.466898213482338e-12,1.0183072876044586e-12
+portfolio_returns,"{""date"": ""2019-05-31"", ""portfolio"": ""Growth Optimized""}",traded_fraction,value_diff,0.0376355666081939,0.0376355666370584,2.886450106709404e-11,1.0376355666081938e-12
+portfolio_returns,"{""date"": ""2019-06-30"", ""portfolio"": ""Balanced Optimized""}",traded_fraction,value_diff,0.0575669584540709,0.0575669584473504,6.720499157175652e-12,1.057566958454071e-12
+portfolio_returns,"{""date"": ""2019-06-30"", ""portfolio"": ""Conservative Optimized""}",traded_fraction,value_diff,0.0302041083826135,0.0302041083746504,7.963098930252599e-12,1.0302041083826135e-12
+portfolio_returns,"{""date"": ""2019-06-30"", ""portfolio"": ""Growth Optimized""}",traded_fraction,value_diff,0.1070961322726238,0.1070961326627565,3.901327039201874e-10,1.1070961322726238e-12
+portfolio_returns,"{""date"": ""2019-07-31"", ""portfolio"": ""Balanced Optimized""}",traded_fraction,value_diff,0.038703039453925,0.0387030394508841,3.0409008644483038e-12,1.038703039453925e-12
+portfolio_returns,"{""date"": ""2019-07-31"", ""portfolio"": ""Conservative Optimized""}",traded_fraction,value_diff,0.114671713735027,0.1146717137280526,6.9744071629074256e-12,1.114671713735027e-12
+portfolio_returns,"{""date"": ""2019-07-31"", ""portfolio"": ""Growth Optimized""}",traded_fraction,value_diff,0.0596620958694788,0.0596620960180829,1.4860410124661882e-10,1.0596620958694788e-12
+portfolio_returns,"{""date"": ""2019-08-31"", ""portfolio"": ""Conservative Optimized""}",traded_fraction,value_diff,0.0227567028500784,0.0227567028606041,1.0525698368457626e-11,1.0227567028500784e-12
+portfolio_returns,"{""date"": ""2019-08-31"", ""portfolio"": ""Growth Optimized""}",traded_fraction,value_diff,0.0025081200769458,0.00250812021245,1.3550419987462536e-10,1.0025081200769458e-12
+portfolio_returns,"{""date"": ""2019-09-30"", ""portfolio"": ""Conservative Optimized""}",traded_fraction,value_diff,0.0242223093840519,0.0242223093979757,1.3923799613291266e-11,1.0242223093840518e-12
+portfolio_returns,"{""date"": ""2019-10-31"", ""portfolio"": ""Conservative Optimized""}",traded_fraction,value_diff,0.0126664413808017,0.0126664413753493,5.4523989490018465e-12,1.0126664413808016e-12
+portfolio_returns,"{""date"": ""2019-12-31"", ""portfolio"": ""Balanced Optimized""}",traded_fraction,value_diff,0.1247662665161532,0.1247662665261041,9.950901214139662e-12,1.1247662665161532e-12
+portfolio_returns,"{""date"": ""2019-12-31"", ""portfolio"": ""Growth Optimized""}",traded_fraction,value_diff,0.0871648459399722,0.0871648457371759,2.0279630752462197e-10,1.0871648459399721e-12
+portfolio_returns,"{""date"": ""2020-01-31"", ""portfolio"": ""Balanced Optimized""}",traded_fraction,value_diff,0.0285875255753876,0.0285875255699001,5.487502813261713e-12,1.0285875255753877e-12
+portfolio_returns,"{""date"": ""2020-01-31"", ""portfolio"": ""Conservative Optimized""}",traded_fraction,value_diff,0.0265817841400494,0.0265817841373426,2.7068000618690746e-12,1.0265817841400494e-12
+portfolio_returns,"{""date"": ""2020-01-31"", ""portfolio"": ""Growth Optimized""}",traded_fraction,value_diff,0.0121831704696567,0.0121831704731665,3.5097983547283107e-12,1.0121831704696566e-12
+portfolio_returns,"{""date"": ""2020-02-29"", ""portfolio"": ""Conservative Optimized""}",traded_fraction,value_diff,0.0593791466715872,0.0593791467673202,9.573299791787448e-11,1.0593791466715872e-12
+portfolio_returns,"{""date"": ""2020-02-29"", ""portfolio"": ""Growth Optimized""}",traded_fraction,value_diff,0.0204966781131282,0.0204966780858376,2.7290596865681138e-11,1.0204966781131282e-12
+portfolio_returns,"{""date"": ""2020-03-31"", ""portfolio"": ""Conservative Optimized""}",traded_fraction,value_diff,0.045294788818671,0.0452947887514408,6.723020057330942e-11,1.045294788818671e-12
+portfolio_returns,"{""date"": ""2020-04-30"", ""portfolio"": ""Conservative Optimized""}",traded_fraction,value_diff,0.1509714417067562,0.1509714417286359,2.1879720257800273e-11,1.1509714417067562e-12
+portfolio_returns,"{""date"": ""2020-04-30"", ""portfolio"": ""Growth Optimized""}",traded_fraction,value_diff,0.1027317122607591,0.1027317122635248,2.765704332219343e-12,1.102731712260759e-12
+portfolio_returns,"{""date"": ""2020-05-31"", ""portfolio"": ""Balanced Optimized""}",traded_fraction,value_diff,0.2392586053562992,0.2392586053345658,2.1733392863154677e-11,1.2392586053562991e-12
+portfolio_returns,"{""date"": ""2020-05-31"", ""portfolio"": ""Conservative Optimized""}",traded_fraction,value_diff,0.1713970982705494,0.1713970982692631,1.2862766407550907e-12,1.1713970982705493e-12
+portfolio_returns,"{""date"": ""2020-06-30"", ""portfolio"": ""Balanced Optimized""}",traded_fraction,value_diff,0.0356289796329678,0.0356289796478213,1.4853500374112372e-11,1.0356289796329678e-12
+portfolio_returns,"{""date"": ""2020-07-31"", ""portfolio"": ""Balanced Optimized""}",traded_fraction,value_diff,0.0479168406205888,0.0479168405988675,2.1721298371080167e-11,1.0479168406205888e-12
+portfolio_returns,"{""date"": ""2020-07-31"", ""portfolio"": ""Growth Optimized""}",traded_fraction,value_diff,0.0554554342465021,0.0554554342304353,1.606680066768007e-11,1.0554554342465022e-12
+portfolio_returns,"{""date"": ""2020-09-30"", ""portfolio"": ""Balanced Optimized""}",traded_fraction,value_diff,0.0470844162473834,0.0470844163491653,1.0178189541187876e-10,1.0470844162473834e-12
+portfolio_returns,"{""date"": ""2020-09-30"", ""portfolio"": ""Conservative Optimized""}",traded_fraction,value_diff,0.0232147405476569,0.0232147405494224,1.7655009398875876e-12,1.0232147405476568e-12
+portfolio_returns,"{""date"": ""2020-09-30"", ""portfolio"": ""Growth Optimized""}",traded_fraction,value_diff,0.0610692606688507,0.0610692606816629,1.2812202687673135e-11,1.0610692606688507e-12
+portfolio_returns,"{""date"": ""2020-10-31"", ""portfolio"": ""Conservative Optimized""}",traded_fraction,value_diff,0.0284917413667855,0.028491741367984,1.1984996328706643e-12,1.0284917413667854e-12
+portfolio_returns,"{""date"": ""2020-11-30"", ""portfolio"": ""Balanced Optimized""}",traded_fraction,value_diff,0.0587973846322922,0.058797384683606,5.1313800430996537e-11,1.0587973846322922e-12
+portfolio_returns,"{""date"": ""2020-11-30"", ""portfolio"": ""Conservative Optimized""}",traded_fraction,value_diff,0.012420505683334,0.0124205056991029,1.5768900074597525e-11,1.012420505683334e-12
+portfolio_returns,"{""date"": ""2020-12-31"", ""portfolio"": ""Balanced Optimized""}",traded_fraction,value_diff,0.3616406103532056,0.3616406103506336,2.571998169997869e-12,1.3616406103532056e-12
+portfolio_returns,"{""date"": ""2020-12-31"", ""portfolio"": ""Conservative Optimized""}",traded_fraction,value_diff,0.2575305680248687,0.257530568066712,4.184330659739999e-11,1.2575305680248687e-12
+portfolio_returns,"{""date"": ""2021-01-31"", ""portfolio"": ""Balanced Optimized""}",traded_fraction,value_diff,0.061290814146056,0.0612908141433033,2.752700845043421e-12,1.061290814146056e-12
+portfolio_returns,"{""date"": ""2021-02-28"", ""portfolio"": ""Balanced Optimized""}",traded_fraction,value_diff,0.1049188395464371,0.1049188395399179,6.5192018450233036e-12,1.104918839546437e-12
+portfolio_returns,"{""date"": ""2021-11-30"", ""portfolio"": ""Conservative Optimized""}",traded_fraction,value_diff,0.0558934251411611,0.0558934251362908,4.870298608850021e-12,1.0558934251411611e-12
+portfolio_returns,"{""date"": ""2021-12-31"", ""portfolio"": ""Conservative Optimized""}",traded_fraction,value_diff,0.0321080629285214,0.0321080628979428,3.057859521149453e-11,1.0321080629285214e-12
+portfolio_returns,"{""date"": ""2022-01-31"", ""portfolio"": ""Conservative Optimized""}",traded_fraction,value_diff,0.0221848240865687,0.0221848240149444,7.162430024076905e-11,1.0221848240865686e-12
+portfolio_returns,"{""date"": ""2022-02-28"", ""portfolio"": ""Conservative Optimized""}",traded_fraction,value_diff,0.0808441030963018,0.0808441031010328,4.7309933748351796e-12,1.0808441030963018e-12
+portfolio_returns,"{""date"": ""2022-03-31"", ""portfolio"": ""Conservative Optimized""}",traded_fraction,value_diff,0.0510020899019784,0.0510020898899715,1.2006902416761278e-11,1.0510020899019785e-12
+portfolio_returns,"{""date"": ""2024-03-31"", ""portfolio"": ""Balanced Optimized""}",traded_fraction,value_diff,0.0423436486332974,0.0423436486603414,2.704399898467713e-11,1.0423436486332974e-12
+portfolio_returns,"{""date"": ""2024-04-30"", ""portfolio"": ""Balanced Optimized""}",traded_fraction,value_diff,0.0699208980317814,0.0699208981825916,1.5081019766327586e-10,1.0699208980317814e-12
+portfolio_returns,"{""date"": ""2024-04-30"", ""portfolio"": ""Growth Optimized""}",traded_fraction,value_diff,0.0453887764142274,0.0453887764163132,2.0857968130449933e-12,1.0453887764142274e-12
+portfolio_returns,"{""date"": ""2024-05-31"", ""portfolio"": ""Balanced Optimized""}",traded_fraction,value_diff,0.0537540085579254,0.0537540086597837,1.0185829957265469e-10,1.0537540085579253e-12
+portfolio_returns,"{""date"": ""2024-05-31"", ""portfolio"": ""Growth Optimized""}",traded_fraction,value_diff,0.0733938502387392,0.0733938502415024,2.7631924526261287e-12,1.0733938502387393e-12
+portfolio_returns,"{""date"": ""2024-07-31"", ""portfolio"": ""Balanced Optimized""}",traded_fraction,value_diff,0.0375479009167697,0.0375479009126693,4.1003936357419946e-12,1.0375479009167697e-12
+portfolio_returns,"{""date"": ""2024-08-31"", ""portfolio"": ""Balanced Optimized""}",traded_fraction,value_diff,0.0407306451643733,0.0407306451714324,7.059096363004613e-12,1.0407306451643733e-12
+portfolio_returns,"{""date"": ""2024-08-31"", ""portfolio"": ""Growth Optimized""}",traded_fraction,value_diff,0.0697346973826461,0.0697346973839784,1.3323092629136113e-12,1.069734697382646e-12
+portfolio_returns,"{""date"": ""2024-09-30"", ""portfolio"": ""Balanced Optimized""}",traded_fraction,value_diff,0.0081453028956248,0.0081453028937378,1.887000972145003e-12,1.0081453028956247e-12
+portfolio_returns,"{""date"": ""2024-09-30"", ""portfolio"": ""Growth Optimized""}",traded_fraction,value_diff,0.0394128961280748,0.0394128961256784,2.3963955819716887e-12,1.0394128961280748e-12
+portfolio_returns,"{""date"": ""2024-10-31"", ""portfolio"": ""Balanced Optimized""}",traded_fraction,value_diff,0.0998294981405314,0.0998294981331742,7.357198184010372e-12,1.0998294981405314e-12
+portfolio_returns,"{""date"": ""2024-11-30"", ""portfolio"": ""Balanced Optimized""}",traded_fraction,value_diff,0.0424356344738064,0.0424356345035958,2.978940011333364e-11,1.0424356344738064e-12
+portfolio_returns,"{""date"": ""2024-11-30"", ""portfolio"": ""Growth Optimized""}",traded_fraction,value_diff,0.1258500344122435,0.1258500344188441,6.600608948303943e-12,1.1258500344122435e-12
+portfolio_returns,"{""date"": ""2024-12-31"", ""portfolio"": ""Growth Optimized""}",traded_fraction,value_diff,0.1229380427888776,0.1229380427945096,5.631994870469725e-12,1.1229380427888777e-12
+portfolio_returns,"{""date"": ""2025-01-31"", ""portfolio"": ""Balanced Optimized""}",traded_fraction,value_diff,0.0073501730640885,0.0073501730690687,4.980200279947056e-12,1.0073501730640884e-12
+portfolio_returns,"{""date"": ""2025-02-28"", ""portfolio"": ""Balanced Optimized""}",traded_fraction,value_diff,0.0597731531005547,0.0597731531042566,3.701899897734506e-12,1.0597731531005547e-12
+portfolio_returns,"{""date"": ""2025-04-30"", ""portfolio"": ""Balanced Optimized""}",traded_fraction,value_diff,0.0277582172518261,0.0277582172545854,2.7592997331460367e-12,1.0277582172518261e-12
+portfolio_returns,"{""date"": ""2025-04-30"", ""portfolio"": ""Conservative Optimized""}",traded_fraction,value_diff,0.0320125418063685,0.0320125418189181,1.2549600247879766e-11,1.0320125418063685e-12
+portfolio_returns,"{""date"": ""2025-05-31"", ""portfolio"": ""Balanced Optimized""}",traded_fraction,value_diff,0.060762490260937,0.0607624902635084,2.571401425122133e-12,1.0607624902609369e-12
+portfolio_returns,"{""date"": ""2025-05-31"", ""portfolio"": ""Conservative Optimized""}",traded_fraction,value_diff,0.0515593282340742,0.0515593281688379,6.523630247112777e-11,1.0515593282340743e-12
+portfolio_returns,"{""date"": ""2025-06-30"", ""portfolio"": ""Growth Optimized""}",traded_fraction,value_diff,0.0320143849221476,0.0320143850394629,1.1731529636627158e-10,1.0320143849221476e-12
+portfolio_returns,"{""date"": ""2025-07-31"", ""portfolio"": ""Balanced Optimized""}",traded_fraction,value_diff,0.1622611121577784,0.1622611120397067,1.180716913129487e-10,1.1622611121577784e-12
+portfolio_returns,"{""date"": ""2025-07-31"", ""portfolio"": ""Growth Optimized""}",traded_fraction,value_diff,0.2370902959841965,0.2370902958787139,1.054825948809679e-10,1.2370902959841966e-12
+portfolio_returns,"{""date"": ""2025-08-31"", ""portfolio"": ""Balanced Optimized""}",traded_fraction,value_diff,0.0874791109690429,0.0874791109130796,5.596330343582423e-11,1.0874791109690428e-12
+portfolio_returns,"{""date"": ""2025-08-31"", ""portfolio"": ""Growth Optimized""}",traded_fraction,value_diff,0.101261702689882,0.1012617026916042,1.7222057113741585e-12,1.101261702689882e-12
+portfolio_returns,"{""date"": ""2025-11-30"", ""portfolio"": ""Growth Optimized""}",traded_fraction,value_diff,0.1719270264730895,0.1719270264709343,2.1551926909779695e-12,1.1719270264730895e-12
+portfolio_returns,"{""date"": ""2025-12-31"", ""portfolio"": ""Conservative Optimized""}",traded_fraction,value_diff,0.048827878709324,0.0488278787153099,5.985899276250706e-12,1.048827878709324e-12
+portfolio_returns,"{""date"": ""2025-12-31"", ""portfolio"": ""Growth Optimized""}",traded_fraction,value_diff,0.283190886566078,0.2831908865343779,3.170008699981963e-11,1.283190886566078e-12
+weights,"{""date"": ""2017-01-31"", ""portfolio"": ""Growth Optimized"", ""ticker"": ""EEM""}",weight,value_diff,3.4563069367573305e-05,3.456306733618824e-05,2.0313850631454265e-12,1.0000345630693676e-12
+weights,"{""date"": ""2017-01-31"", ""portfolio"": ""Growth Optimized"", ""ticker"": ""EFA""}",weight,value_diff,0.2999657627136416,0.2999657627156475,2.0058954497415016e-12,1.2999657627136415e-12
+weights,"{""date"": ""2017-02-28"", ""portfolio"": ""Growth Optimized"", ""ticker"": ""BIL""}",weight,value_diff,8.049769110496064e-06,8.049751314129947e-06,1.779636611619578e-11,1.0000080497691106e-12
+weights,"{""date"": ""2017-02-28"", ""portfolio"": ""Growth Optimized"", ""ticker"": ""EEM""}",weight,value_diff,0.0116355054999438,0.0116355054905595,9.38430062824569e-12,1.0116355054999438e-12
+weights,"{""date"": ""2017-02-28"", ""portfolio"": ""Growth Optimized"", ""ticker"": ""EFA""}",weight,value_diff,0.2883646611122644,0.2883646611212198,8.9553919835339e-12,1.2883646611122644e-12
+weights,"{""date"": ""2017-02-28"", ""portfolio"": ""Growth Optimized"", ""ticker"": ""IEF""}",weight,value_diff,0.1877954267207709,0.1877954267386758,1.7904899785037287e-11,1.1877954267207708e-12
+weights,"{""date"": ""2017-04-30"", ""portfolio"": ""Conservative Optimized"", ""ticker"": ""EFA""}",weight,value_diff,0.0537982777253246,0.0537982777286142,3.2896046997521466e-12,1.0537982777253247e-12
+weights,"{""date"": ""2017-04-30"", ""portfolio"": ""Conservative Optimized"", ""ticker"": ""GLD""}",weight,value_diff,0.0004537991991642,0.0004537991748727,2.4291500018078227e-11,1.0004537991991642e-12
+weights,"{""date"": ""2017-04-30"", ""portfolio"": ""Conservative Optimized"", ""ticker"": ""IEF""}",weight,value_diff,0.4014730676723295,0.4014730676874406,1.5111134565870543e-11,1.4014730676723295e-12
+weights,"{""date"": ""2017-04-30"", ""portfolio"": ""Conservative Optimized"", ""ticker"": ""LQD""}",weight,value_diff,0.19807373772918,0.1980737377382299,9.049899718505117e-12,1.19807373772918e-12
+weights,"{""date"": ""2017-04-30"", ""portfolio"": ""Conservative Optimized"", ""ticker"": ""SPY""}",weight,value_diff,0.1961992734891403,0.1961992734863756,2.764677375921565e-12,1.1961992734891404e-12
+weights,"{""date"": ""2017-06-30"", ""portfolio"": ""Conservative Optimized"", ""ticker"": ""GLD""}",weight,value_diff,0.0001236843647504,0.0001236843675344,2.783999999934547e-12,1.0001236843647503e-12
+weights,"{""date"": ""2017-06-30"", ""portfolio"": ""Conservative Optimized"", ""ticker"": ""IEF""}",weight,value_diff,0.4067148199587204,0.4067148199569282,1.792177517501159e-12,1.4067148199587204e-12
+weights,"{""date"": ""2017-07-31"", ""portfolio"": ""Conservative Optimized"", ""ticker"": ""GLD""}",weight,value_diff,0.0001227052001125,0.0001227052015306,1.4181000124180443e-12,1.0001227052001124e-12
+weights,"{""date"": ""2017-10-31"", ""portfolio"": ""Balanced Optimized"", ""ticker"": ""BIL""}",weight,value_diff,0.1499856524626021,0.1499856524613308,1.2712886299226511e-12,1.149985652462602e-12
+weights,"{""date"": ""2017-10-31"", ""portfolio"": ""Balanced Optimized"", ""ticker"": ""IEF""}",weight,value_diff,0.2520997927746859,0.2520997927759714,1.2854717290622375e-12,1.2520997927746858e-12
+weights,"{""date"": ""2017-10-31"", ""portfolio"": ""Conservative Optimized"", ""ticker"": ""GLD""}",weight,value_diff,0.0001044365792334,0.000104436572011,7.222400005531607e-12,1.0001044365792334e-12
+weights,"{""date"": ""2017-10-31"", ""portfolio"": ""Conservative Optimized"", ""ticker"": ""IEF""}",weight,value_diff,0.3915898463531239,0.3915898463582379,5.1140203183308586e-12,1.3915898463531239e-12
+weights,"{""date"": ""2017-10-31"", ""portfolio"": ""Conservative Optimized"", ""ticker"": ""LQD""}",weight,value_diff,0.2083060602789175,0.2083060602809746,2.057104486752337e-12,1.2083060602789175e-12
+weights,"{""date"": ""2017-12-31"", ""portfolio"": ""Balanced Optimized"", ""ticker"": ""BIL""}",weight,value_diff,0.1498461193209941,0.1498461193126782,8.31590352134981e-12,1.1498461193209941e-12
+weights,"{""date"": ""2017-12-31"", ""portfolio"": ""Balanced Optimized"", ""ticker"": ""IEF""}",weight,value_diff,0.2607581195226687,0.2607581195310116,8.342881940848201e-12,1.2607581195226686e-12
+weights,"{""date"": ""2018-02-28"", ""portfolio"": ""Balanced Optimized"", ""ticker"": ""BIL""}",weight,value_diff,0.1471028252105563,0.1471028248655344,3.450218999390131e-10,1.1471028252105563e-12
+weights,"{""date"": ""2018-02-28"", ""portfolio"": ""Balanced Optimized"", ""ticker"": ""EEM""}",weight,value_diff,1.703951526735243e-06,1.703955512738362e-06,3.9860031190467e-12,1.0000017039515268e-12
+weights,"{""date"": ""2018-02-28"", ""portfolio"": ""Balanced Optimized"", ""ticker"": ""EFA""}",weight,value_diff,0.1570074807668244,0.1570074807556703,1.115407766150156e-11,1.1570074807668244e-12
+weights,"{""date"": ""2018-02-28"", ""portfolio"": ""Balanced Optimized"", ""ticker"": ""GLD""}",weight,value_diff,0.0158395099451078,0.0158395099695323,2.4424500616460065e-11,1.0158395099451078e-12
+weights,"{""date"": ""2018-02-28"", ""portfolio"": ""Balanced Optimized"", ""ticker"": ""IEF""}",weight,value_diff,0.2870565038927656,0.2870565042105835,3.17817883122018e-10,1.2870565038927657e-12
+weights,"{""date"": ""2018-02-28"", ""portfolio"": ""Balanced Optimized"", ""ticker"": ""LQD""}",weight,value_diff,1.1609515702140624e-06,1.1609543498766563e-06,2.779662593874619e-12,1.0000011609515702e-12
+weights,"{""date"": ""2018-02-28"", ""portfolio"": ""Balanced Optimized"", ""ticker"": ""SPY""}",weight,value_diff,0.3929908152816489,0.3929908152888169,7.1679884250386294e-12,1.3929908152816488e-12
+weights,"{""date"": ""2018-02-28"", ""portfolio"": ""Conservative Optimized"", ""ticker"": ""GLD""}",weight,value_diff,2.8020223033041488e-05,2.8020225428291295e-05,2.3952498072802014e-12,1.000028020223033e-12
+weights,"{""date"": ""2018-02-28"", ""portfolio"": ""Conservative Optimized"", ""ticker"": ""IEF""}",weight,value_diff,0.410997406612932,0.4109974066112933,1.638689184346731e-12,1.410997406612932e-12
+weights,"{""date"": ""2018-03-31"", ""portfolio"": ""Balanced Optimized"", ""ticker"": ""BIL""}",weight,value_diff,0.1499957940275672,0.1499957940327634,5.196204577728736e-12,1.1499957940275671e-12
+weights,"{""date"": ""2018-03-31"", ""portfolio"": ""Balanced Optimized"", ""ticker"": ""GLD""}",weight,value_diff,2.6192893333077057e-05,2.6192870840581205e-05,2.24924958520912e-11,1.000026192893333e-12
+weights,"{""date"": ""2018-03-31"", ""portfolio"": ""Balanced Optimized"", ""ticker"": ""IEF""}",weight,value_diff,0.2999776876454271,0.2999776876631269,1.769978608123779e-11,1.299977687645427e-12
+weights,"{""date"": ""2018-04-30"", ""portfolio"": ""Balanced Optimized"", ""ticker"": ""BIL""}",weight,value_diff,0.1499826737856565,0.1499826737934119,7.7554074273678e-12,1.1499826737856565e-12
+weights,"{""date"": ""2018-04-30"", ""portfolio"": ""Balanced Optimized"", ""ticker"": ""GLD""}",weight,value_diff,0.0004438300246138,0.0004438299763163,4.829750000542171e-11,1.0004438300246138e-12
+weights,"{""date"": ""2018-04-30"", ""portfolio"": ""Balanced Optimized"", ""ticker"": ""IEF""}",weight,value_diff,0.2995722114072496,0.2995722114483637,4.1114112114826185e-11,1.2995722114072495e-12
+weights,"{""date"": ""2018-05-31"", ""portfolio"": ""Balanced Optimized"", ""ticker"": ""BIL""}",weight,value_diff,0.1499850501130799,0.1499850500908713,2.220859607326986e-11,1.1499850501130798e-12
+weights,"{""date"": ""2018-05-31"", ""portfolio"": ""Balanced Optimized"", ""ticker"": ""EEM""}",weight,value_diff,1.8572628817856736e-06,1.8572655660578176e-06,2.6842721440579705e-12,1.0000018572628817e-12
+weights,"{""date"": ""2018-05-31"", ""portfolio"": ""Balanced Optimized"", ""ticker"": ""GLD""}",weight,value_diff,0.0006192166070628,0.0006192167848488,1.77786000006043e-10,1.0006192166070628e-12
+weights,"{""date"": ""2018-05-31"", ""portfolio"": ""Balanced Optimized"", ""ticker"": ""IEF""}",weight,value_diff,0.299394463305627,0.2993944631481831,1.5744394676886486e-10,1.299394463305627e-12
+weights,"{""date"": ""2018-05-31"", ""portfolio"": ""Balanced Optimized"", ""ticker"": ""LQD""}",weight,value_diff,1.2699742300992983e-06,1.2699760968173614e-06,1.8667180630680704e-12,1.00000126997423e-12
+weights,"{""date"": ""2018-05-31"", ""portfolio"": ""Balanced Optimized"", ""ticker"": ""SPY""}",weight,value_diff,0.3785024784513293,0.3785024784474793,3.8499758936438866e-12,1.3785024784513292e-12
+weights,"{""date"": ""2018-05-31"", ""portfolio"": ""Conservative Optimized"", ""ticker"": ""GLD""}",weight,value_diff,6.446732475307914e-06,6.446731044013374e-06,1.4312945402519231e-12,1.0000064467324753e-12
+weights,"{""date"": ""2018-06-30"", ""portfolio"": ""Balanced Optimized"", ""ticker"": ""BIL""}",weight,value_diff,0.1499864875597995,0.1499864875311431,2.865638282223415e-11,1.1499864875597994e-12
+weights,"{""date"": ""2018-06-30"", ""portfolio"": ""Balanced Optimized"", ""ticker"": ""EEM""}",weight,value_diff,1.9247730708877364e-06,1.924777040546768e-06,3.969659031759112e-12,1.0000019247730709e-12
+weights,"{""date"": ""2018-06-30"", ""portfolio"": ""Balanced Optimized"", ""ticker"": ""EFA""}",weight,value_diff,0.1801436743471925,0.1801436743370698,1.0122708227200405e-11,1.1801436743471925e-12
+weights,"{""date"": ""2018-06-30"", ""portfolio"": ""Balanced Optimized"", ""ticker"": ""GLD""}",weight,value_diff,0.0016575212001653,0.0016575214493451,2.49179800057564e-10,1.0016575212001653e-12
+weights,"{""date"": ""2018-06-30"", ""portfolio"": ""Balanced Optimized"", ""ticker"": ""IEF""}",weight,value_diff,0.2983547496781017,0.2983547494549629,2.2313884073810186e-10,1.2983547496781017e-12
+weights,"{""date"": ""2018-06-30"", ""portfolio"": ""Balanced Optimized"", ""ticker"": ""LQD""}",weight,value_diff,1.241561933276971e-06,1.2415645487974246e-06,2.6155204535278643e-12,1.0000012415619333e-12
+weights,"{""date"": ""2018-06-30"", ""portfolio"": ""Balanced Optimized"", ""ticker"": ""SPY""}",weight,value_diff,0.3698544008797366,0.3698544008858895,6.152911513623849e-12,1.3698544008797364e-12
+weights,"{""date"": ""2018-06-30"", ""portfolio"": ""Conservative Optimized"", ""ticker"": ""GLD""}",weight,value_diff,2.059136499413167e-05,2.059136864438963e-05,3.650257959124988e-12,1.000020591364994e-12
+weights,"{""date"": ""2018-06-30"", ""portfolio"": ""Conservative Optimized"", ""ticker"": ""IEF""}",weight,value_diff,0.4323345793829223,0.4323345793804912,2.4311108681729365e-12,1.4323345793829223e-12
+weights,"{""date"": ""2018-06-30"", ""portfolio"": ""Conservative Optimized"", ""ticker"": ""LQD""}",weight,value_diff,0.1676449748755322,0.1676449748743441,1.1881051698026113e-12,1.1676449748755322e-12
+weights,"{""date"": ""2018-06-30"", ""portfolio"": ""Growth Optimized"", ""ticker"": ""GLD""}",weight,value_diff,0.0001081995564374,0.0001081995551668,1.270599998912797e-12,1.0001081995564374e-12
+weights,"{""date"": ""2018-06-30"", ""portfolio"": ""Growth Optimized"", ""ticker"": ""IEF""}",weight,value_diff,0.1998855036824254,0.1998855036838661,1.44070866348045e-12,1.1998855036824254e-12
+weights,"{""date"": ""2018-07-31"", ""portfolio"": ""Balanced Optimized"", ""ticker"": ""BIL""}",weight,value_diff,0.1499681817353204,0.1499681817515177,1.619729350643695e-11,1.1499681817353203e-12
+weights,"{""date"": ""2018-07-31"", ""portfolio"": ""Balanced Optimized"", ""ticker"": ""EFA""}",weight,value_diff,0.1825555024962085,0.1825555025001845,3.9760139625144575e-12,1.1825555024962085e-12
+weights,"{""date"": ""2018-07-31"", ""portfolio"": ""Balanced Optimized"", ""ticker"": ""GLD""}",weight,value_diff,0.0004094807053974,0.0004094806527777,5.2619699992661334e-11,1.0004094807053974e-12
+weights,"{""date"": ""2018-07-31"", ""portfolio"": ""Balanced Optimized"", ""ticker"": ""IEF""}",weight,value_diff,0.2996208161168724,0.2996208161540847,3.72122888059323e-11,1.2996208161168724e-12
+weights,"{""date"": ""2018-07-31"", ""portfolio"": ""Balanced Optimized"", ""ticker"": ""SPY""}",weight,value_diff,0.3674426405632879,0.367442640560244,3.0438984666147917e-12,1.3674426405632879e-12
+weights,"{""date"": ""2018-08-31"", ""portfolio"": ""Balanced Optimized"", ""ticker"": ""BIL""}",weight,value_diff,0.1498642554374467,0.1498642555037658,6.63191168648325e-11,1.1498642554374467e-12
+weights,"{""date"": ""2018-08-31"", ""portfolio"": ""Balanced Optimized"", ""ticker"": ""EFA""}",weight,value_diff,0.1839584930943417,0.1839584930972393,2.8975988275448117e-12,1.1839584930943417e-12
+weights,"{""date"": ""2018-08-31"", ""portfolio"": ""Balanced Optimized"", ""ticker"": ""GLD""}",weight,value_diff,7.209498112645575e-06,7.209491474240292e-06,6.638405282969511e-12,1.0000072094981126e-12
+weights,"{""date"": ""2018-08-31"", ""portfolio"": ""Balanced Optimized"", ""ticker"": ""IEF""}",weight,value_diff,0.3001280861847797,0.3001280861255129,5.926681367895981e-11,1.3001280861847797e-12
+weights,"{""date"": ""2018-08-31"", ""portfolio"": ""Balanced Optimized"", ""ticker"": ""SPY""}",weight,value_diff,0.366041207584436,0.3660412075818116,2.6244006967601763e-12,1.366041207584436e-12
+weights,"{""date"": ""2018-09-30"", ""portfolio"": ""Balanced Optimized"", ""ticker"": ""BIL""}",weight,value_diff,0.149958273965464,0.1499582739873193,2.1855323106834135e-11,1.149958273965464e-12
+weights,"{""date"": ""2018-09-30"", ""portfolio"": ""Balanced Optimized"", ""ticker"": ""IEF""}",weight,value_diff,0.3000405277134184,0.3000405276924968,2.0921597787548762e-11,1.3000405277134183e-12
+weights,"{""date"": ""2018-09-30"", ""portfolio"": ""Growth Optimized"", ""ticker"": ""BIL""}",weight,value_diff,1.3101874625657916e-06,1.3101920501259732e-06,4.587560181656069e-12,1.0000013101874626e-12
+weights,"{""date"": ""2018-09-30"", ""portfolio"": ""Growth Optimized"", ""ticker"": ""EEM""}",weight,value_diff,8.239604893147526e-07,8.23963380446681e-07,2.891131928457081e-12,1.0000008239604893e-12
+weights,"{""date"": ""2018-09-30"", ""portfolio"": ""Growth Optimized"", ""ticker"": ""EFA""}",weight,value_diff,0.3037026414719134,0.3037026417445893,2.726758818738517e-10,1.3037026414719134e-12
+weights,"{""date"": ""2018-09-30"", ""portfolio"": ""Growth Optimized"", ""ticker"": ""GLD""}",weight,value_diff,7.875348857008504e-07,7.87537634218474e-07,2.7485176235438486e-12,1.0000007875348856e-12
+weights,"{""date"": ""2018-09-30"", ""portfolio"": ""Growth Optimized"", ""ticker"": ""IEF""}",weight,value_diff,0.1999977668814906,0.1999977668736812,7.809392021940198e-12,1.1999977668814905e-12
+weights,"{""date"": ""2018-09-30"", ""portfolio"": ""Growth Optimized"", ""ticker"": ""SPY""}",weight,value_diff,0.4962965345675973,0.4962965342920305,2.7556679160767317e-10,1.4962965345675973e-12
+weights,"{""date"": ""2018-10-31"", ""portfolio"": ""Growth Optimized"", ""ticker"": ""EFA""}",weight,value_diff,0.3235208896229323,0.3235208896244441,1.5117906926320757e-12,1.3235208896229323e-12
+weights,"{""date"": ""2018-10-31"", ""portfolio"": ""Growth Optimized"", ""ticker"": ""IEF""}",weight,value_diff,0.1999911783166301,0.1999911783153484,1.281696970778512e-12,1.19999117831663e-12
+weights,"{""date"": ""2018-10-31"", ""portfolio"": ""Growth Optimized"", ""ticker"": ""SPY""}",weight,value_diff,0.4764780590700944,0.4764780590684428,1.6515677714323829e-12,1.4764780590700943e-12
+weights,"{""date"": ""2018-11-30"", ""portfolio"": ""Balanced Optimized"", ""ticker"": ""BIL""}",weight,value_diff,0.1499847032238728,0.1499847032262759,2.403105492376767e-12,1.1499847032238728e-12
+weights,"{""date"": ""2018-11-30"", ""portfolio"": ""Balanced Optimized"", ""ticker"": ""GLD""}",weight,value_diff,0.0137531897725874,0.0137531897668928,5.694599305994252e-12,1.0137531897725875e-12
+weights,"{""date"": ""2018-11-30"", ""portfolio"": ""Balanced Optimized"", ""ticker"": ""IEF""}",weight,value_diff,0.2862605764527791,0.2862605764563099,3.5308422852153853e-12,1.2862605764527791e-12
+weights,"{""date"": ""2018-12-31"", ""portfolio"": ""Conservative Optimized"", ""ticker"": ""GLD""}",weight,value_diff,0.00016713643415,0.0001671364377214,3.571400011663506e-12,1.00016713643415e-12
+weights,"{""date"": ""2018-12-31"", ""portfolio"": ""Conservative Optimized"", ""ticker"": ""IEF""}",weight,value_diff,0.4271235520403348,0.4271235520377702,2.5646151868841116e-12,1.4271235520403348e-12
+weights,"{""date"": ""2018-12-31"", ""portfolio"": ""Growth Optimized"", ""ticker"": ""BIL""}",weight,value_diff,0.0011465979733384,0.0011465979770911,3.75269997368588e-12,1.0011465979733383e-12
+weights,"{""date"": ""2018-12-31"", ""portfolio"": ""Growth Optimized"", ""ticker"": ""IEF""}",weight,value_diff,0.1647653274889095,0.1647653274852001,3.709421658726342e-12,1.1647653274889095e-12
+weights,"{""date"": ""2019-01-31"", ""portfolio"": ""Balanced Optimized"", ""ticker"": ""BIL""}",weight,value_diff,0.1499816924651414,0.1499816924256791,3.946229454321326e-11,1.1499816924651414e-12
+weights,"{""date"": ""2019-01-31"", ""portfolio"": ""Balanced Optimized"", ""ticker"": ""EFA""}",weight,value_diff,0.2464625349938123,0.2464625349914327,2.3795965198303293e-12,1.2464625349938122e-12
+weights,"{""date"": ""2019-01-31"", ""portfolio"": ""Balanced Optimized"", ""ticker"": ""IEF""}",weight,value_diff,0.2616813193710647,0.2616813194092922,3.8227476739649546e-11,1.2616813193710647e-12
+weights,"{""date"": ""2019-01-31"", ""portfolio"": ""Balanced Optimized"", ""ticker"": ""SPY""}",weight,value_diff,0.3035373510684782,0.3035373510705752,2.097044760063227e-12,1.3035373510684782e-12
+weights,"{""date"": ""2019-01-31"", ""portfolio"": ""Conservative Optimized"", ""ticker"": ""EFA""}",weight,value_diff,0.0833151137998612,0.0833151138019197,2.0584922655331184e-12,1.083315113799861e-12
+weights,"{""date"": ""2019-01-31"", ""portfolio"": ""Conservative Optimized"", ""ticker"": ""GLD""}",weight,value_diff,0.00274760357774,0.0027476035629201,1.4819900081425308e-11,1.0027476035777399e-12
+weights,"{""date"": ""2019-01-31"", ""portfolio"": ""Conservative Optimized"", ""ticker"": ""IEF""}",weight,value_diff,0.4188070289421962,0.418807028952772,1.0575817999125547e-11,1.4188070289421962e-12
+weights,"{""date"": ""2019-01-31"", ""portfolio"": ""Conservative Optimized"", ""ticker"": ""LQD""}",weight,value_diff,0.1784460570854917,0.1784460570896386,4.146905041579885e-12,1.1784460570854916e-12
+weights,"{""date"": ""2019-01-31"", ""portfolio"": ""Conservative Optimized"", ""ticker"": ""SPY""}",weight,value_diff,0.1666834397710798,0.1666834397692235,1.8562928971732617e-12,1.1666834397710797e-12
+weights,"{""date"": ""2019-02-28"", ""portfolio"": ""Conservative Optimized"", ""ticker"": ""GLD""}",weight,value_diff,0.000104307436148,0.0001043074429001,6.7520999913212726e-12,1.000104307436148e-12
+weights,"{""date"": ""2019-02-28"", ""portfolio"": ""Conservative Optimized"", ""ticker"": ""IEF""}",weight,value_diff,0.4557833588508592,0.4557833588463753,4.483913240704851e-12,1.4557833588508592e-12
+weights,"{""date"": ""2019-02-28"", ""portfolio"": ""Conservative Optimized"", ""ticker"": ""LQD""}",weight,value_diff,0.144112743550689,0.1441127435484674,2.2216117834261695e-12,1.1441127435506889e-12
+weights,"{""date"": ""2019-02-28"", ""portfolio"": ""Growth Optimized"", ""ticker"": ""BIL""}",weight,value_diff,0.0086625975699953,0.0086625976990009,1.2900559960560276e-10,1.0086625975699953e-12
+weights,"{""date"": ""2019-02-28"", ""portfolio"": ""Growth Optimized"", ""ticker"": ""EEM""}",weight,value_diff,2.684729246327185e-06,2.68473165779847e-06,2.411471284854608e-12,1.0000026847292464e-12
+weights,"{""date"": ""2019-02-28"", ""portfolio"": ""Growth Optimized"", ""ticker"": ""GLD""}",weight,value_diff,0.0158036377920287,0.0158036378158415,2.3812802424361124e-11,1.0158036377920287e-12
+weights,"{""date"": ""2019-02-28"", ""portfolio"": ""Growth Optimized"", ""ticker"": ""IEF""}",weight,value_diff,0.1755325799651347,0.1755325798112713,1.5386339424772189e-10,1.1755325799651347e-12
+weights,"{""date"": ""2019-02-28"", ""portfolio"": ""Growth Optimized"", ""ticker"": ""LQD""}",weight,value_diff,1.1846728411155297e-06,1.1846738860645208e-06,1.0449489911256034e-12,1.0000011846728411e-12
+weights,"{""date"": ""2019-02-28"", ""portfolio"": ""Growth Optimized"", ""ticker"": ""SPY""}",weight,value_diff,0.4054107038929957,0.4054107038893132,3.682498750379182e-12,1.4054107038929957e-12
+weights,"{""date"": ""2019-03-31"", ""portfolio"": ""Balanced Optimized"", ""ticker"": ""GLD""}",weight,value_diff,4.940801966196151e-06,4.940803326740784e-06,1.3605446335659488e-12,1.0000049408019663e-12
+weights,"{""date"": ""2019-03-31"", ""portfolio"": ""Conservative Optimized"", ""ticker"": ""EFA""}",weight,value_diff,0.0898450903320542,0.0898450903341346,2.0803914146938496e-12,1.0898450903320542e-12
+weights,"{""date"": ""2019-03-31"", ""portfolio"": ""Conservative Optimized"", ""ticker"": ""GLD""}",weight,value_diff,0.0001972521610658,0.0001972521524359,8.629899990149695e-12,1.0001972521610658e-12
+weights,"{""date"": ""2019-03-31"", ""portfolio"": ""Conservative Optimized"", ""ticker"": ""IEF""}",weight,value_diff,0.464394756733954,0.46439475673949,5.5360160899908806e-12,1.464394756733954e-12
+weights,"{""date"": ""2019-03-31"", ""portfolio"": ""Conservative Optimized"", ""ticker"": ""LQD""}",weight,value_diff,0.1354085247837352,0.1354085247867692,3.0340174816956278e-12,1.1354085247837351e-12
+weights,"{""date"": ""2019-03-31"", ""portfolio"": ""Conservative Optimized"", ""ticker"": ""SPY""}",weight,value_diff,0.1601539191310539,0.1601539191290827,1.9712009802219654e-12,1.1601539191310539e-12
+weights,"{""date"": ""2019-03-31"", ""portfolio"": ""Growth Optimized"", ""ticker"": ""BIL""}",weight,value_diff,0.0179552460055018,0.0179552460005117,4.990102081547931e-12,1.0179552460055017e-12
+weights,"{""date"": ""2019-03-31"", ""portfolio"": ""Growth Optimized"", ""ticker"": ""GLD""}",weight,value_diff,9.355813650041409e-06,9.355811970786071e-06,1.6792553370786108e-12,1.00000935581365e-12
+weights,"{""date"": ""2019-03-31"", ""portfolio"": ""Growth Optimized"", ""ticker"": ""IEF""}",weight,value_diff,0.1820350543654686,0.1820350543722031,6.734501845073737e-12,1.1820350543654686e-12
+weights,"{""date"": ""2019-04-30"", ""portfolio"": ""Balanced Optimized"", ""ticker"": ""GLD""}",weight,value_diff,5.3875788783696e-05,5.387578720589629e-05,1.5777997127135873e-12,1.0000538757887837e-12
+weights,"{""date"": ""2019-04-30"", ""portfolio"": ""Balanced Optimized"", ""ticker"": ""IEF""}",weight,value_diff,0.2999472841287258,0.2999472841302223,1.4965251260434798e-12,1.2999472841287258e-12
+weights,"{""date"": ""2019-04-30"", ""portfolio"": ""Conservative Optimized"", ""ticker"": ""EFA""}",weight,value_diff,0.093143179081084,0.0931431790797293,1.354694134647616e-12,1.093143179081084e-12
+weights,"{""date"": ""2019-04-30"", ""portfolio"": ""Conservative Optimized"", ""ticker"": ""GLD""}",weight,value_diff,0.0054926890962772,0.0054926891016879,5.410699666086316e-12,1.0054926890962772e-12
+weights,"{""date"": ""2019-04-30"", ""portfolio"": ""Conservative Optimized"", ""ticker"": ""IEF""}",weight,value_diff,0.4166088697853491,0.4166088697823424,3.006705995289849e-12,1.4166088697853491e-12
+weights,"{""date"": ""2019-04-30"", ""portfolio"": ""Conservative Optimized"", ""ticker"": ""LQD""}",weight,value_diff,0.1778986923653936,0.1778986923630226,2.3709922913894843e-12,1.1778986923653937e-12
+weights,"{""date"": ""2019-04-30"", ""portfolio"": ""Conservative Optimized"", ""ticker"": ""SPY""}",weight,value_diff,0.1568561122544693,0.1568561122557317,1.2624068457256499e-12,1.1568561122544693e-12
+weights,"{""date"": ""2019-04-30"", ""portfolio"": ""Growth Optimized"", ""ticker"": ""BIL""}",weight,value_diff,0.0327884544723292,0.0327884545628985,9.056930205808555e-11,1.032788454472329e-12
+weights,"{""date"": ""2019-04-30"", ""portfolio"": ""Growth Optimized"", ""ticker"": ""EEM""}",weight,value_diff,0.0015280738365008,0.0015280740978706,2.6136979993512943e-10,1.0015280738365008e-12
+weights,"{""date"": ""2019-04-30"", ""portfolio"": ""Growth Optimized"", ""ticker"": ""EFA""}",weight,value_diff,0.4241860230857984,0.4241860228633614,2.2243701325308507e-10,1.4241860230857984e-12
+weights,"{""date"": ""2019-04-30"", ""portfolio"": ""Growth Optimized"", ""ticker"": ""GLD""}",weight,value_diff,6.304438789545058e-06,6.30445036554721e-06,1.1576002151950939e-11,1.0000063044387895e-12
+weights,"{""date"": ""2019-04-30"", ""portfolio"": ""Growth Optimized"", ""ticker"": ""IEF""}",weight,value_diff,0.1672047210255978,0.1672047209224736,1.031242036209079e-10,1.1672047210255977e-12
+weights,"{""date"": ""2019-04-30"", ""portfolio"": ""Growth Optimized"", ""ticker"": ""SPY""}",weight,value_diff,0.3742859030777007,0.3742859030387679,3.893280142719391e-11,1.3742859030777006e-12
+weights,"{""date"": ""2019-05-31"", ""portfolio"": ""Balanced Optimized"", ""ticker"": ""EFA""}",weight,value_diff,0.2854898148963969,0.2854898149010786,4.681699472541823e-12,1.2854898148963969e-12
+weights,"{""date"": ""2019-05-31"", ""portfolio"": ""Balanced Optimized"", ""ticker"": ""GLD""}",weight,value_diff,0.0001065735924156,0.0001065735731308,1.9284799993891932e-11,1.0001065735924156e-12
+weights,"{""date"": ""2019-05-31"", ""portfolio"": ""Balanced Optimized"", ""ticker"": ""IEF""}",weight,value_diff,0.2998954067209712,0.299895406739593,1.862177079203775e-11,1.2998954067209712e-12
+weights,"{""date"": ""2019-05-31"", ""portfolio"": ""Balanced Optimized"", ""ticker"": ""SPY""}",weight,value_diff,0.2645080260648272,0.2645080260608441,3.983091634296443e-12,1.2645080260648271e-12
+weights,"{""date"": ""2019-05-31"", ""portfolio"": ""Conservative Optimized"", ""ticker"": ""GLD""}",weight,value_diff,0.0075431079372327,0.0075431079357766,1.4560999975210542e-12,1.0075431079372327e-12
+weights,"{""date"": ""2019-05-31"", ""portfolio"": ""Growth Optimized"", ""ticker"": ""BIL""}",weight,value_diff,0.0261244325776499,0.0261244326344692,5.6819299265598033e-11,1.02612443257765e-12
+weights,"{""date"": ""2019-05-31"", ""portfolio"": ""Growth Optimized"", ""ticker"": ""EEM""}",weight,value_diff,0.0026768857710202,0.0026768859221586,1.511383999723559e-10,1.0026768857710202e-12
+weights,"{""date"": ""2019-05-31"", ""portfolio"": ""Growth Optimized"", ""ticker"": ""EFA""}",weight,value_diff,0.4309223008315713,0.4309223006997971,1.3177420266075046e-10,1.4309223008315712e-12
+weights,"{""date"": ""2019-05-31"", ""portfolio"": ""Growth Optimized"", ""ticker"": ""GLD""}",weight,value_diff,6.067776877571226e-06,6.067785938586943e-06,9.061015717271926e-12,1.0000060677768776e-12
+weights,"{""date"": ""2019-05-31"", ""portfolio"": ""Growth Optimized"", ""ticker"": ""IEF""}",weight,value_diff,0.1738690950640176,0.1738690949974999,6.651770800836232e-11,1.1738690950640176e-12
+weights,"{""date"": ""2019-05-31"", ""portfolio"": ""Growth Optimized"", ""ticker"": ""SPY""}",weight,value_diff,0.3664008133974083,0.3664008133780443,1.93640103951509e-11,1.3664008133974083e-12
+weights,"{""date"": ""2019-06-30"", ""portfolio"": ""Balanced Optimized"", ""ticker"": ""GLD""}",weight,value_diff,4.5040423843697046e-05,4.504042278965867e-05,1.0540383737806143e-12,1.0000450404238437e-12
+weights,"{""date"": ""2019-06-30"", ""portfolio"": ""Conservative Optimized"", ""ticker"": ""GLD""}",weight,value_diff,0.0077772620189868,0.0077772620135261,5.4607004681961335e-12,1.0077772620189868e-12
+weights,"{""date"": ""2019-06-30"", ""portfolio"": ""Conservative Optimized"", ""ticker"": ""IEF""}",weight,value_diff,0.424641706040348,0.4246417060437343,3.38629124740919e-12,1.424641706040348e-12
+weights,"{""date"": ""2019-06-30"", ""portfolio"": ""Conservative Optimized"", ""ticker"": ""LQD""}",weight,value_diff,0.167581147015472,0.1675811470175102,2.0382029397580936e-12,1.167581147015472e-12
+weights,"{""date"": ""2019-06-30"", ""portfolio"": ""Growth Optimized"", ""ticker"": ""BIL""}",weight,value_diff,3.684027026888682e-06,3.684028140821113e-06,1.1139324309288696e-12,1.000003684027027e-12
+weights,"{""date"": ""2019-06-30"", ""portfolio"": ""Growth Optimized"", ""ticker"": ""EFA""}",weight,value_diff,0.4664069947224678,0.4664069947207706,1.697253448895708e-12,1.4664069947224678e-12
+weights,"{""date"": ""2019-06-30"", ""portfolio"": ""Growth Optimized"", ""ticker"": ""IEF""}",weight,value_diff,0.1999940378788881,0.199994037877075,1.8130774659397275e-12,1.199994037878888e-12
+weights,"{""date"": ""2019-07-31"", ""portfolio"": ""Conservative Optimized"", ""ticker"": ""GLD""}",weight,value_diff,0.0001488891421954,0.0001488891441875,1.9921000070886874e-12,1.0001488891421953e-12
+weights,"{""date"": ""2019-07-31"", ""portfolio"": ""Growth Optimized"", ""ticker"": ""BIL""}",weight,value_diff,0.000392322275777,0.000392321917553,3.5822399999671864e-10,1.000392322275777e-12
+weights,"{""date"": ""2019-07-31"", ""portfolio"": ""Growth Optimized"", ""ticker"": ""EEM""}",weight,value_diff,8.763701998261256e-07,8.763672906075255e-07,2.9092186001099124e-12,1.0000008763701997e-12
+weights,"{""date"": ""2019-07-31"", ""portfolio"": ""Growth Optimized"", ""ticker"": ""EFA""}",weight,value_diff,0.4910525818780768,0.4910525819487029,7.06260605554121e-11,1.4910525818780767e-12
+weights,"{""date"": ""2019-07-31"", ""portfolio"": ""Growth Optimized"", ""ticker"": ""GLD""}",weight,value_diff,3.95267858308987e-07,3.9526655361439313e-07,1.304694593875736e-12,1.0000003952678583e-12
+weights,"{""date"": ""2019-07-31"", ""portfolio"": ""Growth Optimized"", ""ticker"": ""IEF""}",weight,value_diff,0.199607127526689,0.1996071278867286,3.6003960923736145e-10,1.199607127526689e-12
+weights,"{""date"": ""2019-07-31"", ""portfolio"": ""Growth Optimized"", ""ticker"": ""SPY""}",weight,value_diff,0.3089465417517233,0.3089465416840065,6.771683214168434e-11,1.3089465417517233e-12
+weights,"{""date"": ""2019-08-31"", ""portfolio"": ""Conservative Optimized"", ""ticker"": ""EFA""}",weight,value_diff,0.091101258541127,0.0911012585427036,1.5765999616945692e-12,1.091101258541127e-12
+weights,"{""date"": ""2019-08-31"", ""portfolio"": ""Conservative Optimized"", ""ticker"": ""GLD""}",weight,value_diff,1.0303181670511387e-05,1.0303175136210812e-05,6.5343005749204106e-12,1.0000103031816705e-12
+weights,"{""date"": ""2019-08-31"", ""portfolio"": ""Conservative Optimized"", ""ticker"": ""IEF""}",weight,value_diff,0.4623873633516588,0.4623873633554942,3.835376460870066e-12,1.4623873633516587e-12
+weights,"{""date"": ""2019-08-31"", ""portfolio"": ""Conservative Optimized"", ""ticker"": ""LQD""}",weight,value_diff,0.1376024103850328,0.1376024103876761,2.6433022437544196e-12,1.1376024103850328e-12
+weights,"{""date"": ""2019-08-31"", ""portfolio"": ""Conservative Optimized"", ""ticker"": ""SPY""}",weight,value_diff,0.1588984191721886,0.1588984191708446,1.3440082380355989e-12,1.1588984191721886e-12
+weights,"{""date"": ""2019-08-31"", ""portfolio"": ""Growth Optimized"", ""ticker"": ""BIL""}",weight,value_diff,0.000165002649252,0.0001650026520171,2.7650999979283997e-12,1.000165002649252e-12
+weights,"{""date"": ""2019-08-31"", ""portfolio"": ""Growth Optimized"", ""ticker"": ""IEF""}",weight,value_diff,0.1998346335840474,0.1998346335812889,2.758515638134895e-12,1.1998346335840474e-12
+weights,"{""date"": ""2019-09-30"", ""portfolio"": ""Conservative Optimized"", ""ticker"": ""GLD""}",weight,value_diff,5.525089534285552e-05,5.5250894309846e-05,1.0330095204800008e-12,1.0000552508953428e-12
+weights,"{""date"": ""2019-09-30"", ""portfolio"": ""Growth Optimized"", ""ticker"": ""BIL""}",weight,value_diff,2.0136073752472064e-05,2.013606954350639e-05,4.208965675176011e-12,1.0000201360737525e-12
+weights,"{""date"": ""2019-09-30"", ""portfolio"": ""Growth Optimized"", ""ticker"": ""EFA""}",weight,value_diff,0.4815590909128623,0.481559090917468,4.605704706506231e-12,1.4815590909128623e-12
+weights,"{""date"": ""2019-09-30"", ""portfolio"": ""Growth Optimized"", ""ticker"": ""IEF""}",weight,value_diff,0.1999787598542463,0.1999787598586894,4.4431125445498765e-12,1.1999787598542462e-12
+weights,"{""date"": ""2019-09-30"", ""portfolio"": ""Growth Optimized"", ""ticker"": ""SPY""}",weight,value_diff,0.3184395601196616,0.3184395601153392,4.322431301773122e-12,1.3184395601196617e-12
+weights,"{""date"": ""2019-10-31"", ""portfolio"": ""Conservative Optimized"", ""ticker"": ""GLD""}",weight,value_diff,3.105404535593472e-05,3.105404714578905e-05,1.7898543297435385e-12,1.000031054045356e-12
+weights,"{""date"": ""2019-10-31"", ""portfolio"": ""Growth Optimized"", ""ticker"": ""BIL""}",weight,value_diff,5.4429616071335e-06,5.44296422921122e-06,2.6220777199137597e-12,1.0000054429616071e-12
+weights,"{""date"": ""2019-10-31"", ""portfolio"": ""Growth Optimized"", ""ticker"": ""EFA""}",weight,value_diff,0.4728718309346988,0.4728718309320094,2.6894042548519792e-12,1.4728718309346988e-12
+weights,"{""date"": ""2019-10-31"", ""portfolio"": ""Growth Optimized"", ""ticker"": ""IEF""}",weight,value_diff,0.1999940245202037,0.1999940245173342,2.8695101850217952e-12,1.1999940245202037e-12
+weights,"{""date"": ""2019-10-31"", ""portfolio"": ""Growth Optimized"", ""ticker"": ""SPY""}",weight,value_diff,0.3271274383508182,0.3271274383531756,2.357392059337826e-12,1.3271274383508182e-12
+weights,"{""date"": ""2019-12-31"", ""portfolio"": ""Balanced Optimized"", ""ticker"": ""BIL""}",weight,value_diff,0.1305867951316517,0.1305867951245891,7.0626005044260864e-12,1.1305867951316516e-12
+weights,"{""date"": ""2019-12-31"", ""portfolio"": ""Balanced Optimized"", ""ticker"": ""IEF""}",weight,value_diff,0.3194101691822748,0.3194101691885816,6.306843935988127e-12,1.3194101691822748e-12
+weights,"{""date"": ""2019-12-31"", ""portfolio"": ""Growth Optimized"", ""ticker"": ""EFA""}",weight,value_diff,0.4988197773745456,0.4988197772725002,1.0204537215230403e-10,1.4988197773745457e-12
+weights,"{""date"": ""2019-12-31"", ""portfolio"": ""Growth Optimized"", ""ticker"": ""IEF""}",weight,value_diff,0.1999977310040822,0.1999977310027015,1.3807011089994603e-12,1.1999977310040822e-12
+weights,"{""date"": ""2019-12-31"", ""portfolio"": ""Growth Optimized"", ""ticker"": ""SPY""}",weight,value_diff,0.3011795211751319,0.3011795212767523,1.0162037877847752e-10,1.3011795211751318e-12
+weights,"{""date"": ""2020-01-31"", ""portfolio"": ""Balanced Optimized"", ""ticker"": ""BIL""}",weight,value_diff,0.123463680970532,0.1234636809666975,3.834488282450366e-12,1.123463680970532e-12
+weights,"{""date"": ""2020-01-31"", ""portfolio"": ""Balanced Optimized"", ""ticker"": ""IEF""}",weight,value_diff,0.3265351834696727,0.3265351834731047,3.431976924872515e-12,1.3265351834696727e-12
+weights,"{""date"": ""2020-01-31"", ""portfolio"": ""Conservative Optimized"", ""ticker"": ""GLD""}",weight,value_diff,0.0054226184042872,0.0054226184072488,2.961600582829238e-12,1.0054226184042872e-12
+weights,"{""date"": ""2020-01-31"", ""portfolio"": ""Conservative Optimized"", ""ticker"": ""IEF""}",weight,value_diff,0.4848599830775766,0.4848599830755315,2.0450863225107696e-12,1.4848599830775766e-12
+weights,"{""date"": ""2020-01-31"", ""portfolio"": ""Growth Optimized"", ""ticker"": ""EFA""}",weight,value_diff,0.4998921185166672,0.4998921185405369,2.3869684007138403e-11,1.4998921185166672e-12
+weights,"{""date"": ""2020-01-31"", ""portfolio"": ""Growth Optimized"", ""ticker"": ""SPY""}",weight,value_diff,0.3001077623268957,0.3001077623030744,2.3821278283264746e-11,1.3001077623268956e-12
+weights,"{""date"": ""2020-02-29"", ""portfolio"": ""Conservative Optimized"", ""ticker"": ""EEM""}",weight,value_diff,4.064009287304922e-06,4.064005873696133e-06,3.4136087884064758e-12,1.0000040640092873e-12
+weights,"{""date"": ""2020-02-29"", ""portfolio"": ""Conservative Optimized"", ""ticker"": ""EFA""}",weight,value_diff,0.1527116936636436,0.1527116936779101,1.426650464431134e-11,1.1527116936636436e-12
+weights,"{""date"": ""2020-02-29"", ""portfolio"": ""Conservative Optimized"", ""ticker"": ""GLD""}",weight,value_diff,0.0034536104427821,0.0034536103639096,7.887249967725163e-11,1.003453610442782e-12
+weights,"{""date"": ""2020-02-29"", ""portfolio"": ""Conservative Optimized"", ""ticker"": ""IEF""}",weight,value_diff,0.4791392838380646,0.4791392838814129,4.334832492958185e-11,1.4791392838380647e-12
+weights,"{""date"": ""2020-02-29"", ""portfolio"": ""Conservative Optimized"", ""ticker"": ""LQD""}",weight,value_diff,0.1174076101402248,0.1174076101753186,3.5093802863706e-11,1.1174076101402248e-12
+weights,"{""date"": ""2020-02-29"", ""portfolio"": ""Conservative Optimized"", ""ticker"": ""SPY""}",weight,value_diff,0.097284242327069,0.0972842423162161,1.0852901910496371e-11,1.097284242327069e-12
+weights,"{""date"": ""2020-02-29"", ""portfolio"": ""Growth Optimized"", ""ticker"": ""EFA""}",weight,value_diff,0.4996018651896443,0.4996018651992405,9.59621271334754e-12,1.4996018651896443e-12
+weights,"{""date"": ""2020-02-29"", ""portfolio"": ""Growth Optimized"", ""ticker"": ""SPY""}",weight,value_diff,0.3003979252635411,0.3003979252539477,9.593381644634746e-12,1.300397925263541e-12
+weights,"{""date"": ""2020-03-31"", ""portfolio"": ""Conservative Optimized"", ""ticker"": ""EFA""}",weight,value_diff,0.1503229323033856,0.1503229323057301,2.3445134722521743e-12,1.1503229323033856e-12
+weights,"{""date"": ""2020-03-31"", ""portfolio"": ""Conservative Optimized"", ""ticker"": ""GLD""}",weight,value_diff,0.0002516498476543,0.0002516498381636,9.490700001064944e-12,1.0002516498476542e-12
+weights,"{""date"": ""2020-03-31"", ""portfolio"": ""Conservative Optimized"", ""ticker"": ""IEF""}",weight,value_diff,0.4992750162033447,0.4992750162129228,9.57811607804615e-12,1.4992750162033445e-12
+weights,"{""date"": ""2020-03-31"", ""portfolio"": ""Conservative Optimized"", ""ticker"": ""SPY""}",weight,value_diff,0.0996673419965729,0.0996673419950686,1.5042966872158559e-12,1.099667341996573e-12
+weights,"{""date"": ""2020-04-30"", ""portfolio"": ""Balanced Optimized"", ""ticker"": ""BIL""}",weight,value_diff,0.0184736820045579,0.0184736820032954,1.2625005207933526e-12,1.0184736820045579e-12
+weights,"{""date"": ""2020-05-31"", ""portfolio"": ""Balanced Optimized"", ""ticker"": ""BIL""}",weight,value_diff,0.0155203646832156,0.0155203646910828,7.867199947053649e-12,1.0155203646832155e-12
+weights,"{""date"": ""2020-05-31"", ""portfolio"": ""Balanced Optimized"", ""ticker"": ""IEF""}",weight,value_diff,0.4344785326396337,0.4344785326316288,8.004930052152304e-12,1.4344785326396337e-12
+weights,"{""date"": ""2020-07-31"", ""portfolio"": ""Balanced Optimized"", ""ticker"": ""BIL""}",weight,value_diff,0.0031085556322987,0.0031085556436583,1.135959989267965e-11,1.0031085556322988e-12
+weights,"{""date"": ""2020-07-31"", ""portfolio"": ""Balanced Optimized"", ""ticker"": ""IEF""}",weight,value_diff,0.4468911866237837,0.4468911866123963,1.1387391030126537e-11,1.4468911866237837e-12
+weights,"{""date"": ""2020-07-31"", ""portfolio"": ""Growth Optimized"", ""ticker"": ""EEM""}",weight,value_diff,0.0164419038880398,0.0164419038961568,8.11700012759431e-12,1.0164419038880398e-12
+weights,"{""date"": ""2020-07-31"", ""portfolio"": ""Growth Optimized"", ""ticker"": ""SPY""}",weight,value_diff,0.2835583280318288,0.2835583280237846,8.044176436072803e-12,1.2835583280318287e-12
+weights,"{""date"": ""2020-08-31"", ""portfolio"": ""Balanced Optimized"", ""ticker"": ""BIL""}",weight,value_diff,0.0091087831143933,0.009108783125215,1.0821701174057452e-11,1.0091087831143932e-12
+weights,"{""date"": ""2020-08-31"", ""portfolio"": ""Balanced Optimized"", ""ticker"": ""IEF""}",weight,value_diff,0.4408911576821948,0.4408911576713284,1.0866363364669951e-11,1.4408911576821948e-12
+weights,"{""date"": ""2020-08-31"", ""portfolio"": ""Growth Optimized"", ""ticker"": ""EEM""}",weight,value_diff,0.0165470369911662,0.0165470369845574,6.608800312557506e-12,1.0165470369911662e-12
+weights,"{""date"": ""2020-08-31"", ""portfolio"": ""Growth Optimized"", ""ticker"": ""SPY""}",weight,value_diff,0.2834531479727211,0.2834531479792866,6.565525900725788e-12,1.283453147972721e-12
+weights,"{""date"": ""2020-09-30"", ""portfolio"": ""Balanced Optimized"", ""ticker"": ""BIL""}",weight,value_diff,0.0002933833958728,0.0002933833541945,4.1678300025625725e-11,1.0002933833958728e-12
+weights,"{""date"": ""2020-09-30"", ""portfolio"": ""Balanced Optimized"", ""ticker"": ""EEM""}",weight,value_diff,2.2623356453717568e-06,2.262334541284925e-06,1.1040868316581102e-12,1.0000022623356454e-12
+weights,"{""date"": ""2020-09-30"", ""portfolio"": ""Balanced Optimized"", ""ticker"": ""EFA""}",weight,value_diff,0.4336876953689913,0.433687695370797,1.8056667272503546e-12,1.4336876953689914e-12
+weights,"{""date"": ""2020-09-30"", ""portfolio"": ""Balanced Optimized"", ""ticker"": ""IEF""}",weight,value_diff,0.4497063289701976,0.4497063290120154,4.181782697898484e-11,1.4497063289701975e-12
+weights,"{""date"": ""2020-10-31"", ""portfolio"": ""Balanced Optimized"", ""ticker"": ""BIL""}",weight,value_diff,3.797453010594632e-05,3.797451101896616e-05,1.9086980158563877e-11,1.000037974530106e-12
+weights,"{""date"": ""2020-10-31"", ""portfolio"": ""Balanced Optimized"", ""ticker"": ""EFA""}",weight,value_diff,0.4514258805862201,0.451425880587698,1.4779288903810084e-12,1.4514258805862201e-12
+weights,"{""date"": ""2020-10-31"", ""portfolio"": ""Balanced Optimized"", ""ticker"": ""IEF""}",weight,value_diff,0.4499619222598123,0.4499619222789797,1.9167389897489784e-11,1.4499619222598123e-12
+weights,"{""date"": ""2020-11-30"", ""portfolio"": ""Balanced Optimized"", ""ticker"": ""BIL""}",weight,value_diff,0.0144384230450322,0.0144384230492425,4.210298776285981e-12,1.014438423045032e-12
+weights,"{""date"": ""2020-11-30"", ""portfolio"": ""Balanced Optimized"", ""ticker"": ""EEM""}",weight,value_diff,0.0150001926887423,0.0150001926898461,1.1037993435936144e-12,1.0150001926887423e-12
+weights,"{""date"": ""2020-11-30"", ""portfolio"": ""Balanced Optimized"", ""ticker"": ""IEF""}",weight,value_diff,0.4355615512012029,0.4355615511969575,4.245381823864136e-12,1.4355615512012028e-12
+weights,"{""date"": ""2020-11-30"", ""portfolio"": ""Conservative Optimized"", ""ticker"": ""EEM""}",weight,value_diff,0.0012082646616098,0.0012082646462877,1.5322100142475814e-11,1.0012082646616097e-12
+weights,"{""date"": ""2020-11-30"", ""portfolio"": ""Conservative Optimized"", ""ticker"": ""EFA""}",weight,value_diff,0.205808087826106,0.2058080878384964,1.2390422021724135e-11,1.205808087826106e-12
+weights,"{""date"": ""2020-11-30"", ""portfolio"": ""Conservative Optimized"", ""ticker"": ""GLD""}",weight,value_diff,0.0079192746727312,0.0079192746648288,7.902399221104695e-12,1.0079192746727311e-12
+weights,"{""date"": ""2020-11-30"", ""portfolio"": ""Conservative Optimized"", ""ticker"": ""LQD""}",weight,value_diff,0.0920817671484259,0.092081767156145,7.71908925667475e-12,1.0920817671484258e-12
+weights,"{""date"": ""2020-11-30"", ""portfolio"": ""Conservative Optimized"", ""ticker"": ""SPY""}",weight,value_diff,0.0429836475122841,0.0429836475152158,2.9317034910825157e-12,1.0429836475122841e-12
+weights,"{""date"": ""2020-12-31"", ""portfolio"": ""Balanced Optimized"", ""ticker"": ""BIL""}",weight,value_diff,0.0204831674717531,0.0204831674737096,1.956500933486538e-12,1.020483167471753e-12
+weights,"{""date"": ""2020-12-31"", ""portfolio"": ""Balanced Optimized"", ""ticker"": ""IEF""}",weight,value_diff,0.4295162654223848,0.429516265420402,1.9828028108292983e-12,1.4295162654223847e-12
+weights,"{""date"": ""2021-01-31"", ""portfolio"": ""Balanced Optimized"", ""ticker"": ""BIL""}",weight,value_diff,0.0138241981367377,0.0138241981400309,3.2931990467943706e-12,1.0138241981367377e-12
+weights,"{""date"": ""2021-01-31"", ""portfolio"": ""Balanced Optimized"", ""ticker"": ""IEF""}",weight,value_diff,0.4361745827484326,0.4361745827451013,3.3313352076902447e-12,1.4361745827484326e-12
+weights,"{""date"": ""2021-11-30"", ""portfolio"": ""Conservative Optimized"", ""ticker"": ""GLD""}",weight,value_diff,0.006574305889328,0.0065743058913432,2.015199639104903e-12,1.006574305889328e-12
+weights,"{""date"": ""2021-11-30"", ""portfolio"": ""Conservative Optimized"", ""ticker"": ""LQD""}",weight,value_diff,0.093425864770863,0.0934258647688738,1.9892004710087008e-12,1.093425864770863e-12
+weights,"{""date"": ""2021-12-31"", ""portfolio"": ""Conservative Optimized"", ""ticker"": ""EEM""}",weight,value_diff,0.0859297497026055,0.0859297497006761,1.9294010833448283e-12,1.0859297497026054e-12
+weights,"{""date"": ""2021-12-31"", ""portfolio"": ""Conservative Optimized"", ""ticker"": ""EFA""}",weight,value_diff,0.1082376236061818,0.1082376236082094,2.0276003098729234e-12,1.1082376236061819e-12
+weights,"{""date"": ""2021-12-31"", ""portfolio"": ""Conservative Optimized"", ""ticker"": ""GLD""}",weight,value_diff,0.0042022446606362,0.004202244676302,1.5665799386888057e-11,1.0042022446606362e-12
+weights,"{""date"": ""2021-12-31"", ""portfolio"": ""Conservative Optimized"", ""ticker"": ""LQD""}",weight,value_diff,0.095798370210065,0.0957983701945817,1.5483295201512703e-11,1.095798370210065e-12
+weights,"{""date"": ""2022-01-31"", ""portfolio"": ""Conservative Optimized"", ""ticker"": ""EEM""}",weight,value_diff,0.0836492411128826,0.0836492411087656,4.1169984088540446e-12,1.0836492411128827e-12
+weights,"{""date"": ""2022-01-31"", ""portfolio"": ""Conservative Optimized"", ""ticker"": ""EFA""}",weight,value_diff,0.1047288588376734,0.1047288588440434,6.37000174830149e-12,1.1047288588376734e-12
+weights,"{""date"": ""2022-01-31"", ""portfolio"": ""Conservative Optimized"", ""ticker"": ""GLD""}",weight,value_diff,0.0038420144006911,0.0038420144503748,4.968369986257937e-11,1.003842014400691e-12
+weights,"{""date"": ""2022-01-31"", ""portfolio"": ""Conservative Optimized"", ""ticker"": ""LQD""}",weight,value_diff,0.0961584937342705,0.0961584936850064,4.926410668293357e-11,1.0961584937342704e-12
+weights,"{""date"": ""2022-01-31"", ""portfolio"": ""Conservative Optimized"", ""ticker"": ""SPY""}",weight,value_diff,0.0616219000494438,0.0616219000471908,2.252996400553542e-12,1.0616219000494438e-12
+weights,"{""date"": ""2022-02-28"", ""portfolio"": ""Conservative Optimized"", ""ticker"": ""GLD""}",weight,value_diff,0.0048617652726708,0.0048617652784131,5.7423007321366626e-12,1.0048617652726709e-12
+weights,"{""date"": ""2022-02-28"", ""portfolio"": ""Conservative Optimized"", ""ticker"": ""LQD""}",weight,value_diff,0.0951386232476663,0.0951386232419869,5.6794013936212195e-12,1.0951386232476663e-12
+weights,"{""date"": ""2024-03-31"", ""portfolio"": ""Balanced Optimized"", ""ticker"": ""EEM""}",weight,value_diff,0.2436478403046725,0.2436478402997406,4.931915986716717e-12,1.2436478403046724e-12
+weights,"{""date"": ""2024-03-31"", ""portfolio"": ""Balanced Optimized"", ""ticker"": ""EFA""}",weight,value_diff,0.0028858267220513,0.0028858267337267,1.1675399796268193e-11,1.0028858267220513e-12
+weights,"{""date"": ""2024-03-31"", ""portfolio"": ""Balanced Optimized"", ""ticker"": ""GLD""}",weight,value_diff,0.0708148037364008,0.0708148037345543,1.8464951789809447e-12,1.0708148037364008e-12
+weights,"{""date"": ""2024-03-31"", ""portfolio"": ""Balanced Optimized"", ""ticker"": ""IEF""}",weight,value_diff,0.229185701566693,0.2291857015685669,1.873917687689186e-12,1.2291857015666929e-12
+weights,"{""date"": ""2024-03-31"", ""portfolio"": ""Balanced Optimized"", ""ticker"": ""SPY""}",weight,value_diff,0.3034663329732761,0.3034663329665325,6.743550162724432e-12,1.3034663329732761e-12
+weights,"{""date"": ""2024-04-30"", ""portfolio"": ""Balanced Optimized"", ""ticker"": ""EEM""}",weight,value_diff,0.2431702850104108,0.2431702849734557,3.6955105642277886e-11,1.2431702850104107e-12
+weights,"{""date"": ""2024-04-30"", ""portfolio"": ""Balanced Optimized"", ""ticker"": ""EFA""}",weight,value_diff,0.0037874860016544,0.0037874860858162,8.416179992504214e-11,1.0037874860016545e-12
+weights,"{""date"": ""2024-04-30"", ""portfolio"": ""Balanced Optimized"", ""ticker"": ""GLD""}",weight,value_diff,0.0437753708392332,0.043775370834314,4.919196994190855e-12,1.0437753708392332e-12
+weights,"{""date"": ""2024-04-30"", ""portfolio"": ""Balanced Optimized"", ""ticker"": ""IEF""}",weight,value_diff,0.2562249757588229,0.2562249757638929,5.069999975404471e-12,1.2562249757588228e-12
+weights,"{""date"": ""2024-04-30"", ""portfolio"": ""Balanced Optimized"", ""ticker"": ""SPY""}",weight,value_diff,0.3030422289879347,0.3030422289407282,4.720651647360796e-11,1.3030422289879346e-12
+weights,"{""date"": ""2024-04-30"", ""portfolio"": ""Growth Optimized"", ""ticker"": ""GLD""}",weight,value_diff,1.2937916310451374e-05,1.2937914941023548e-05,1.3694278255317084e-12,1.0000129379163105e-12
+weights,"{""date"": ""2024-04-30"", ""portfolio"": ""Growth Optimized"", ""ticker"": ""IEF""}",weight,value_diff,0.0499869844264873,0.049986984427875,1.3876955140545988e-12,1.0499869844264874e-12
+weights,"{""date"": ""2024-07-31"", ""portfolio"": ""Balanced Optimized"", ""ticker"": ""EFA""}",weight,value_diff,0.0129423277538256,0.0129423277517789,2.046699615343428e-12,1.0129423277538257e-12
+weights,"{""date"": ""2024-07-31"", ""portfolio"": ""Balanced Optimized"", ""ticker"": ""GLD""}",weight,value_diff,0.0812631464103283,0.0812631464115971,1.2688045059050523e-12,1.0812631464103283e-12
+weights,"{""date"": ""2024-07-31"", ""portfolio"": ""Balanced Optimized"", ""ticker"": ""IEF""}",weight,value_diff,0.2187371472602859,0.2187371472590024,1.2835010831935278e-12,1.2187371472602858e-12
+weights,"{""date"": ""2024-07-31"", ""portfolio"": ""Balanced Optimized"", ""ticker"": ""SPY""}",weight,value_diff,0.2917303757237728,0.2917303757252031,1.4303003226245892e-12,1.2917303757237727e-12
+weights,"{""date"": ""2024-08-31"", ""portfolio"": ""Balanced Optimized"", ""ticker"": ""EEM""}",weight,value_diff,0.2550887244924819,0.255088724494776,2.2941093469341922e-12,1.2550887244924818e-12
+weights,"{""date"": ""2024-08-31"", ""portfolio"": ""Balanced Optimized"", ""ticker"": ""EFA""}",weight,value_diff,0.0002966249191223,0.0002966249133478,5.7745000187764406e-12,1.0002966249191223e-12
+weights,"{""date"": ""2024-08-31"", ""portfolio"": ""Balanced Optimized"", ""ticker"": ""GLD""}",weight,value_diff,0.0765569737166219,0.0765569737181171,1.4951928584139296e-12,1.0765569737166219e-12
+weights,"{""date"": ""2024-08-31"", ""portfolio"": ""Balanced Optimized"", ""ticker"": ""IEF""}",weight,value_diff,0.2234433655132721,0.2234433655117557,1.51639811818427e-12,1.2234433655132722e-12
+weights,"{""date"": ""2024-08-31"", ""portfolio"": ""Balanced Optimized"", ""ticker"": ""SPY""}",weight,value_diff,0.2946146505883957,0.2946146505918761,3.480382648746172e-12,1.2946146505883958e-12
+weights,"{""date"": ""2024-08-31"", ""portfolio"": ""Growth Optimized"", ""ticker"": ""EFA""}",weight,value_diff,0.0511560079095831,0.0511560079081553,1.4278023208191826e-12,1.051156007909583e-12
+weights,"{""date"": ""2024-10-31"", ""portfolio"": ""Balanced Optimized"", ""ticker"": ""EEM""}",weight,value_diff,0.2264955781345309,0.2264955781312629,3.2679969841353795e-12,1.2264955781345308e-12
+weights,"{""date"": ""2024-10-31"", ""portfolio"": ""Balanced Optimized"", ""ticker"": ""EFA""}",weight,value_diff,0.0003051857192382,0.000305185730521,1.128279999811077e-11,1.0003051857192381e-12
+weights,"{""date"": ""2024-10-31"", ""portfolio"": ""Balanced Optimized"", ""ticker"": ""GLD""}",weight,value_diff,0.0927922756840348,0.0927922756772165,6.818295927857321e-12,1.0927922756840347e-12
+weights,"{""date"": ""2024-10-31"", ""portfolio"": ""Balanced Optimized"", ""ticker"": ""IEF""}",weight,value_diff,0.2072078503139796,0.2072078503208198,6.840195077018052e-12,1.2072078503139795e-12
+weights,"{""date"": ""2024-10-31"", ""portfolio"": ""Balanced Optimized"", ""ticker"": ""SPY""}",weight,value_diff,0.3231992361462309,0.323199236138216,8.01492205937393e-12,1.3231992361462309e-12
+weights,"{""date"": ""2024-11-30"", ""portfolio"": ""Growth Optimized"", ""ticker"": ""EEM""}",weight,value_diff,0.3328080936723558,0.3328080936743781,2.0222712393547226e-12,1.3328080936723559e-12
+weights,"{""date"": ""2024-11-30"", ""portfolio"": ""Growth Optimized"", ""ticker"": ""EFA""}",weight,value_diff,0.0055471520540407,0.0055471520490726,4.9681005837021175e-12,1.0055471520540406e-12
+weights,"{""date"": ""2024-11-30"", ""portfolio"": ""Growth Optimized"", ""ticker"": ""SPY""}",weight,value_diff,0.4616447542736034,0.4616447542765491,2.9456992400866966e-12,1.4616447542736033e-12
+weights,"{""date"": ""2025-01-31"", ""portfolio"": ""Balanced Optimized"", ""ticker"": ""EEM""}",weight,value_diff,0.2214293291062055,0.221429329104439,1.7665036100567022e-12,1.2214293291062055e-12
+weights,"{""date"": ""2025-01-31"", ""portfolio"": ""Balanced Optimized"", ""ticker"": ""EFA""}",weight,value_diff,0.0001780407245728,0.0001780407292146,4.641799992337672e-12,1.0001780407245727e-12
+weights,"{""date"": ""2025-01-31"", ""portfolio"": ""Balanced Optimized"", ""ticker"": ""SPY""}",weight,value_diff,0.3283926301692217,0.3283926301663464,2.8753111003254617e-12,1.3283926301692217e-12
+weights,"{""date"": ""2025-04-30"", ""portfolio"": ""Balanced Optimized"", ""ticker"": ""EFA""}",weight,value_diff,0.0001775426755182,0.0001775426769892,1.4710000253471966e-12,1.0001775426755181e-12
+weights,"{""date"": ""2025-04-30"", ""portfolio"": ""Conservative Optimized"", ""ticker"": ""BIL""}",weight,value_diff,0.1499999923922817,0.1499999923954995,3.217787147846707e-12,1.1499999923922817e-12
+weights,"{""date"": ""2025-04-30"", ""portfolio"": ""Conservative Optimized"", ""ticker"": ""EEM""}",weight,value_diff,0.068324018289482,0.0683240183311664,4.168440592700051e-11,1.0683240182894819e-12
+weights,"{""date"": ""2025-04-30"", ""portfolio"": ""Conservative Optimized"", ""ticker"": ""EFA""}",weight,value_diff,2.512224142717233e-07,2.5111615988086496e-07,1.0625439085835998e-10,1.0000002512224143e-12
+weights,"{""date"": ""2025-04-30"", ""portfolio"": ""Conservative Optimized"", ""ticker"": ""GLD""}",weight,value_diff,0.0999999514267043,0.0999999514472438,2.0539500655836207e-11,1.0999999514267043e-12
+weights,"{""date"": ""2025-04-30"", ""portfolio"": ""Conservative Optimized"", ""ticker"": ""IEF""}",weight,value_diff,0.4999999724445629,0.499999972456215,1.1652123710348405e-11,1.4999999724445629e-12
+weights,"{""date"": ""2025-04-30"", ""portfolio"": ""Conservative Optimized"", ""ticker"": ""LQD""}",weight,value_diff,8.373645095199889e-08,8.370104164616581e-08,3.540930583307892e-11,1.000000083736451e-12
+weights,"{""date"": ""2025-04-30"", ""portfolio"": ""Conservative Optimized"", ""ticker"": ""SPY""}",weight,value_diff,0.1816757304881034,0.1816757305526737,6.457029355644295e-11,1.1816757304881033e-12
+weights,"{""date"": ""2025-06-30"", ""portfolio"": ""Growth Optimized"", ""ticker"": ""BIL""}",weight,value_diff,0.1499999745662432,0.1499999745693857,3.1425140267771212e-12,1.1499999745662433e-12
+weights,"{""date"": ""2025-06-30"", ""portfolio"": ""Growth Optimized"", ""ticker"": ""EEM""}",weight,value_diff,0.2984063733473552,0.2984063733513459,3.990696662015125e-12,1.2984063733473552e-12
+weights,"{""date"": ""2025-06-30"", ""portfolio"": ""Growth Optimized"", ""ticker"": ""EFA""}",weight,value_diff,0.0685058723325973,0.0685058723686763,3.607898702018275e-11,1.0685058723325973e-12
+weights,"{""date"": ""2025-06-30"", ""portfolio"": ""Growth Optimized"", ""ticker"": ""GLD""}",weight,value_diff,0.0499998744215558,0.0499998744370011,1.544530475738881e-11,1.0499998744215557e-12
+weights,"{""date"": ""2025-06-30"", ""portfolio"": ""Growth Optimized"", ""ticker"": ""IEF""}",weight,value_diff,1.173066212033517e-07,1.1729219316076022e-07,1.4428042591470291e-11,1.0000001173066212e-12
+weights,"{""date"": ""2025-06-30"", ""portfolio"": ""Growth Optimized"", ""ticker"": ""LQD""}",weight,value_diff,3.3705579615202894e-08,3.3701419946086565e-08,4.159669116329251e-12,1.0000000337055796e-12
+weights,"{""date"": ""2025-06-30"", ""portfolio"": ""Growth Optimized"", ""ticker"": ""SPY""}",weight,value_diff,0.4330877543200473,0.4330877542799776,4.00697253155613e-11,1.4330877543200473e-12
+weights,"{""date"": ""2025-07-31"", ""portfolio"": ""Balanced Optimized"", ""ticker"": ""BIL""}",weight,value_diff,0.1499999714931707,0.1499999715074708,1.430008889080625e-11,1.1499999714931708e-12
+weights,"{""date"": ""2025-07-31"", ""portfolio"": ""Balanced Optimized"", ""ticker"": ""EEM""}",weight,value_diff,0.1214797802758822,0.1214797802483406,2.754160788320803e-11,1.1214797802758822e-12
+weights,"{""date"": ""2025-07-31"", ""portfolio"": ""Balanced Optimized"", ""ticker"": ""EFA""}",weight,value_diff,0.0694982209321486,0.069498220861627,7.052158856879487e-11,1.0694982209321485e-12
+weights,"{""date"": ""2025-07-31"", ""portfolio"": ""Balanced Optimized"", ""ticker"": ""GLD""}",weight,value_diff,0.0999997937106308,0.0999997938140911,1.0346030976382536e-10,1.0999997937106308e-12
+weights,"{""date"": ""2025-07-31"", ""portfolio"": ""Balanced Optimized"", ""ticker"": ""IEF""}",weight,value_diff,0.2000002114590116,0.2000002113529586,1.0605299971544468e-10,1.2000002114590116e-12
+weights,"{""date"": ""2025-07-31"", ""portfolio"": ""Balanced Optimized"", ""ticker"": ""LQD""}",weight,value_diff,2.3337186905993715e-08,2.33254795022024e-08,1.1707403791315907e-11,1.0000000233371868e-12
+weights,"{""date"": ""2025-07-31"", ""portfolio"": ""Balanced Optimized"", ""ticker"": ""SPY""}",weight,value_diff,0.3590219987919688,0.3590219988900323,9.806350176333467e-11,1.3590219987919687e-12
+weights,"{""date"": ""2025-07-31"", ""portfolio"": ""Growth Optimized"", ""ticker"": ""EFA""}",weight,value_diff,0.1776107630581017,0.1776107630600266,1.9249046800950964e-12,1.1776107630581017e-12
+weights,"{""date"": ""2025-07-31"", ""portfolio"": ""Growth Optimized"", ""ticker"": ""SPY""}",weight,value_diff,0.4259944035234765,0.4259944035209607,2.515820884951836e-12,1.4259944035234766e-12
+weights,"{""date"": ""2025-11-30"", ""portfolio"": ""Growth Optimized"", ""ticker"": ""EEM""}",weight,value_diff,0.0256751793311505,0.0256751793322335,1.0830017438401285e-12,1.0256751793311506e-12
+weights,"{""date"": ""2025-12-31"", ""portfolio"": ""Conservative Optimized"", ""ticker"": ""EEM""}",weight,value_diff,0.0111362967980143,0.0111362967993594,1.3450993791019883e-12,1.0111362967980143e-12
+weights,"{""date"": ""2025-12-31"", ""portfolio"": ""Conservative Optimized"", ""ticker"": ""EFA""}",weight,value_diff,0.0113790174757028,0.0113790174772573,1.5544995846106247e-12,1.0113790174757027e-12
+weights,"{""date"": ""2025-12-31"", ""portfolio"": ""Conservative Optimized"", ""ticker"": ""SPY""}",weight,value_diff,0.2274846857262827,0.2274846857233831,2.899597228989137e-12,1.2274846857262826e-12
+weights,"{""date"": ""2025-12-31"", ""portfolio"": ""Growth Optimized"", ""ticker"": ""BIL""}",weight,value_diff,0.1499999860110492,0.1499999860217226,1.0673406602990099e-11,1.1499999860110492e-12
+weights,"{""date"": ""2025-12-31"", ""portfolio"": ""Growth Optimized"", ""ticker"": ""EEM""}",weight,value_diff,0.1088700693705809,0.1088700693301127,4.0468198236887076e-11,1.1088700693705809e-12
+weights,"{""date"": ""2025-12-31"", ""portfolio"": ""Growth Optimized"", ""ticker"": ""EFA""}",weight,value_diff,0.332196584188335,0.332196584203468,1.513300595945566e-11,1.332196584188335e-12
+weights,"{""date"": ""2025-12-31"", ""portfolio"": ""Growth Optimized"", ""ticker"": ""GLD""}",weight,value_diff,0.0499999766006691,0.049999976618534,1.7864904000575166e-11,1.0499999766006692e-12
+weights,"{""date"": ""2025-12-31"", ""portfolio"": ""Growth Optimized"", ""ticker"": ""IEF""}",weight,value_diff,2.3003797109327482e-08,2.298623837549481e-08,1.7558733832673558e-11,1.000000023003797e-12
+weights,"{""date"": ""2025-12-31"", ""portfolio"": ""Growth Optimized"", ""ticker"": ""LQD""}",weight,value_diff,1.4384484575353496e-08,1.43735052923776e-08,1.0979282975895986e-11,1.0000000143844846e-12
+weights,"{""date"": ""2025-12-31"", ""portfolio"": ""Growth Optimized"", ""ticker"": ""SPY""}",weight,value_diff,0.3589333464410839,0.3589333464664189,2.5335011866189916e-11,1.3589333464410837e-12
+portfolio_metrics,"{""portfolio"": ""Balanced Optimized""}",cagr,value_diff,0.07423863226909,0.0742386322673249,1.765101953488113e-12,1.07423863226909e-12
+portfolio_metrics,"{""portfolio"": ""Growth Optimized""}",cagr,value_diff,0.0928997100007147,0.0928997099995858,1.1289025270144748e-12,1.0928997100007147e-12
+portfolio_metrics,"{""portfolio"": ""Conservative Optimized""}",maximum_drawdown,value_diff,-0.1863719168807126,-0.1863719168790806,1.6320000906233645e-12,1.1863719168807126e-12
+portfolio_metrics,"{""portfolio"": ""Balanced Optimized""}",sharpe_cash_proxy,value_diff,0.6013278542949969,0.6013278542749163,2.0080603846395206e-11,1.6013278542949968e-12
+portfolio_metrics,"{""portfolio"": ""Conservative Optimized""}",sharpe_cash_proxy,value_diff,0.4690208011211608,0.4690208011257417,4.580891221905858e-12,1.4690208011211607e-12
+portfolio_metrics,"{""portfolio"": ""Growth Optimized""}",sharpe_cash_proxy,value_diff,0.6203597481752087,0.620359748165681,9.527711952728168e-12,1.6203597481752085e-12
+portfolio_metrics,"{""portfolio"": ""Balanced Optimized""}",information_ratio,value_diff,-0.4919129848042664,-0.4919129848915938,8.732742307060448e-11,1.4919129848042664e-12
+portfolio_metrics,"{""portfolio"": ""Conservative Optimized""}",information_ratio,value_diff,-0.1272508702888108,-0.1272508702717967,1.7014084585653677e-11,1.1272508702888108e-12
+portfolio_metrics,"{""portfolio"": ""Growth Optimized""}",information_ratio,value_diff,-0.6986144365568367,-0.6986144366016651,4.4828363243709646e-11,1.6986144365568367e-12
+portfolio_metrics,"{""portfolio"": ""Balanced Optimized""}",alpha_annual,value_diff,-0.0047909561582077,-0.0047909561600767,1.868999746634792e-12,1.0047909561582077e-12
+portfolio_metrics,"{""portfolio"": ""Growth Optimized""}",alpha_annual,value_diff,-0.0133712056956112,-0.0133712056967931,1.1819000639290422e-12,1.0133712056956111e-12
+portfolio_metrics,"{""portfolio"": ""Balanced Optimized""}",alpha_pvalue_hac,value_diff,0.3558932903515671,0.3558932901143437,2.3722340758425275e-10,1.355893290351567e-12
+portfolio_metrics,"{""portfolio"": ""Conservative Optimized""}",alpha_pvalue_hac,value_diff,0.5346246286340945,0.5346246285708882,6.320632905953971e-11,1.5346246286340945e-12
+portfolio_metrics,"{""portfolio"": ""Growth Optimized""}",alpha_pvalue_hac,value_diff,0.0240883475598423,0.0240883475428673,1.697500126573992e-11,1.0240883475598422e-12
+portfolio_metrics,"{""portfolio"": ""Balanced Optimized""}",beta,value_diff,0.9073781177318324,0.9073781177355472,3.714806240395774e-12,1.907378117731832e-12
+portfolio_metrics,"{""portfolio"": ""Balanced Optimized""}",annual_mean_active_return,value_diff,-0.0107296485510938,-0.0107296485527247,1.6309002759395952e-12,1.0107296485510939e-12
+portfolio_metrics,"{""portfolio"": ""Growth Optimized""}",annual_mean_active_return,value_diff,-0.0175592242018207,-0.0175592242028389,1.0181994136715389e-12,1.0175592242018207e-12
+portfolio_metrics,"{""portfolio"": ""Balanced Optimized""}",annual_traded_fraction,value_diff,0.8918424173004227,0.8918424173180267,1.760402934536387e-11,1.8918424173004227e-12
+portfolio_metrics,"{""portfolio"": ""Conservative Optimized""}",annual_traded_fraction,value_diff,0.6597000989226113,0.6597000989053939,1.7217338665886928e-11,1.6597000989226113e-12
+portfolio_metrics,"{""portfolio"": ""Growth Optimized""}",annual_traded_fraction,value_diff,1.019177832753326,1.019177832835211,8.188494327043827e-11,2.019177832753326e-12
+fund_metrics,"{""fund"": ""MINT""}",annual_volatility,value_diff,0.0127105177085717,0.0127358169701035,2.529926153179915e-05,1.0127105177085717e-12
+fund_metrics,"{""fund"": ""MINT""}",sharpe_cash_proxy,value_diff,0.4582437355715918,0.4573584064068492,0.0008853291647425987,1.4582437355715918e-12
+fund_metrics,"{""fund"": ""MINT""}",tracking_error,value_diff,0.0117272674629084,0.011749208732978,2.1941270069599644e-05,1.0117272674629084e-12
+fund_metrics,"{""fund"": ""MINT""}",information_ratio,value_diff,0.4966643025962228,0.495763849814545,0.0009004527816777741,1.4966643025962227e-12
+fund_metrics,"{""fund"": ""MINT""}",annual_mean_active_return,value_diff,0.0058245151158248,0.0058248329537358,3.178379109998117e-07,1.0058245151158248e-12
+fund_metrics,"{""fund"": ""MINT""}",active_month_hit_rate,value_diff,0.7708333333333334,0.7638888888888888,0.006944444444444531,1.7708333333333333e-12
+rolling_fund_metrics,"{""date"": ""2025-11-30"", ""fund"": ""MINT""}",cagr,value_diff,0.0565858131519689,0.0560256206954863,0.0005601924564826027,1.0565858131519688e-12
+rolling_fund_metrics,"{""date"": ""2025-11-30"", ""fund"": ""MINT""}",annual_volatility,value_diff,0.0045312193208947,0.0047646974177992,0.0002334780969044997,1.0045312193208946e-12
+rolling_fund_metrics,"{""date"": ""2025-12-31"", ""fund"": ""MINT""}",annual_volatility,value_diff,0.00453710131688,0.0048175175922946,0.0002804162754146003,1.00453710131688e-12
+rolling_fund_metrics,"{""date"": ""2025-11-30"", ""fund"": ""MINT""}",sharpe_cash_proxy,value_diff,1.873008719096338,1.6696353243212363,0.20337339477510175,2.8730087190963382e-12
+rolling_fund_metrics,"{""date"": ""2025-12-31"", ""fund"": ""MINT""}",sharpe_cash_proxy,value_diff,1.855542435413056,1.7477996120556023,0.10774282335745378,2.855542435413056e-12
+rolling_fund_metrics,"{""date"": ""2025-11-30"", ""fund"": ""MINT""}",tracking_error,value_diff,0.0045499931994574,0.0046650137218641,0.0001150205224066999,1.0045499931994574e-12
+rolling_fund_metrics,"{""date"": ""2025-12-31"", ""fund"": ""MINT""}",tracking_error,value_diff,0.0045463535246997,0.0047721411778363,0.00022578765313660022,1.0045463535246997e-12
+rolling_fund_metrics,"{""date"": ""2025-11-30"", ""fund"": ""MINT""}",information_ratio,value_diff,1.8652804354049868,1.7053126941888117,0.15996774121617507,2.865280435404987e-12
+rolling_fund_metrics,"{""date"": ""2025-12-31"", ""fund"": ""MINT""}",information_ratio,value_diff,1.851766252118613,1.7644187514798615,0.08734750063875141,2.8517662521186126e-12
+rolling_fund_metrics,"{""date"": ""2025-11-30"", ""fund"": ""MINT""}",annual_mean_active_return,value_diff,0.0084870132961737,0.0079553071184598,0.0005317061777139007,1.0084870132961736e-12
+rolling_fund_metrics,"{""date"": ""2025-12-31"", ""fund"": ""MINT""}",annual_mean_active_return,value_diff,0.0084187840272394,0.0084200553788836,1.2713516442004746e-06,1.0084187840272393e-12
+rolling_fund_metrics,"{""date"": ""2025-11-30"", ""fund"": ""MINT""}",active_month_hit_rate,value_diff,0.8055555555555556,0.7777777777777778,0.02777777777777779,1.8055555555555555e-12
+rolling_fund_metrics,"{""date"": ""2025-12-31"", ""fund"": ""MINT""}",active_month_hit_rate,value_diff,0.8055555555555556,0.7777777777777778,0.02777777777777779,1.8055555555555555e-12
+factor_coefficients,"{""fund"": ""MINT"", ""term"": ""const""}",coefficient,value_diff,0.0004001959438816,0.000400087441157,1.0850272459997888e-07,1.0004001959438817e-12
+factor_coefficients,"{""fund"": ""MINT"", ""term"": ""credit_relative""}",coefficient,value_diff,0.1969764035018806,0.1968484541979624,0.0001279493039181845,1.1969764035018806e-12
+factor_coefficients,"{""fund"": ""MINT"", ""term"": ""equity_excess""}",coefficient,value_diff,-0.0144931435700878,-0.0144431207826961,5.002278739170071e-05,1.0144931435700879e-12
+factor_coefficients,"{""fund"": ""MINT"", ""term"": ""treasury_excess""}",coefficient,value_diff,0.0205771359497622,0.0199657065592388,0.0006114293905233985,1.0205771359497622e-12
+factor_coefficients,"{""fund"": ""MINT"", ""term"": ""const""}",pvalue_hac,value_diff,0.0041834560915969,0.0043448645994966,0.00016140850789970063,1.004183456091597e-12
+factor_coefficients,"{""fund"": ""MINT"", ""term"": ""credit_relative""}",pvalue_hac,value_diff,0.0080259972081963,0.008012778127233,1.3219080963300378e-05,1.0080259972081964e-12
+factor_coefficients,"{""fund"": ""MINT"", ""term"": ""equity_excess""}",pvalue_hac,value_diff,0.1307823709088846,0.1321214301913519,0.001339059282467303,1.1307823709088846e-12
+factor_coefficients,"{""fund"": ""MINT"", ""term"": ""treasury_excess""}",pvalue_hac,value_diff,0.1134964941679408,0.1252512977960154,0.0117548036280746,1.1134964941679407e-12
+factor_coefficients,"{""fund"": ""MINT"", ""term"": ""const""}",ci_low,value_diff,0.0001263225898251,0.000125135089318,1.1875005070999993e-06,1.0001263225898251e-12
+factor_coefficients,"{""fund"": ""MINT"", ""term"": ""credit_relative""}",ci_low,value_diff,0.0513444103003306,0.0513416147499745,2.795550356100851e-06,1.0513444103003306e-12
+factor_coefficients,"{""fund"": ""MINT"", ""term"": ""equity_excess""}",ci_low,value_diff,-0.0332923433034693,-0.0332425691608296,4.977414263970109e-05,1.0332923433034694e-12
+factor_coefficients,"{""fund"": ""MINT"", ""term"": ""treasury_excess""}",ci_low,value_diff,-0.0049053856259296,-0.0055590955281901,0.0006537099022605004,1.0049053856259296e-12
+factor_coefficients,"{""fund"": ""MINT"", ""term"": ""const""}",ci_high,value_diff,0.000674069297938,0.0006750397929961,9.704950580999685e-07,1.000674069297938e-12
+factor_coefficients,"{""fund"": ""MINT"", ""term"": ""credit_relative""}",ci_high,value_diff,0.3426083967034306,0.3423552936459504,0.00025310305748016404,1.3426083967034306e-12
+factor_coefficients,"{""fund"": ""MINT"", ""term"": ""equity_excess""}",ci_high,value_diff,0.0043060561632935,0.0043563275954373,5.027143214380008e-05,1.0043060561632934e-12
+factor_coefficients,"{""fund"": ""MINT"", ""term"": ""treasury_excess""}",ci_high,value_diff,0.046059657525454,0.0454905086466677,0.0005691488787862992,1.046059657525454e-12
+factor_coefficients,"{""fund"": ""MINT"", ""term"": ""const""}",r_squared,value_diff,0.5208880808916931,0.5185908301503783,0.0022972507413148158,1.520888080891693e-12
+factor_coefficients,"{""fund"": ""MINT"", ""term"": ""credit_relative""}",r_squared,value_diff,0.5208880808916931,0.5185908301503783,0.0022972507413148158,1.520888080891693e-12
+factor_coefficients,"{""fund"": ""MINT"", ""term"": ""equity_excess""}",r_squared,value_diff,0.5208880808916931,0.5185908301503783,0.0022972507413148158,1.520888080891693e-12
+factor_coefficients,"{""fund"": ""MINT"", ""term"": ""treasury_excess""}",r_squared,value_diff,0.5208880808916931,0.5185908301503783,0.0022972507413148158,1.520888080891693e-12
+rate_sensitivity,"{""fund"": ""MINT""}",return_per_1pp_yield_change,value_diff,-0.0003194394727441,-0.0002685978484903,5.08416242538e-05,1.0003194394727442e-12
+rate_sensitivity,"{""fund"": ""MINT""}",pvalue_hac,value_diff,0.8677018588802476,0.8887423984597097,0.02104053957946206,1.8677018588802476e-12
+rate_sensitivity,"{""fund"": ""MINT""}",r_squared,value_diff,0.0004890728068215,0.000344490964962,0.00014458184185950004,1.0004890728068215e-12
+monthly_prices,"{""date"": ""2025-11-30""}",MINT,value_diff,96.9817352294922,96.82756042480467,0.15417480468752842,9.79817352294922e-11

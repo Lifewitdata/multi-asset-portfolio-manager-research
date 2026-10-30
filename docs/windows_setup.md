@@ -23,6 +23,8 @@ If that Python selector is no longer present, use `py --list-paths` and select a
 
 Expected fixed-period counts: 10 instruments, 30,390 daily price rows in the recorded run, 144 return months and 108 portfolio backtest months. Sources can revise histories; consult `reports/local/data_quality.json` rather than silently accepting changed counts. The model comparison records 97 forecast months. If a source fails, retry later; never replace it with fabricated data.
 
+Ingestion also rejects a **stale feed**: if one instrument's adjusted close repeats for longer than that instrument ever legitimately does (`STALE_RUN_DAYS = 5`, with a 15-day allowance for BIL), the run stops with `Possible stale feed: ...`. That check exists because of [INC-001](incidents/INC-001-stale-mint-price.md), where a nine-day frozen MINT series passed every earlier check.
+
 Run offline from the validated cache afterward:
 
 ```powershell
@@ -62,7 +64,7 @@ $env:MULTI_ASSET_SQLSERVER_URL = "mssql+pyodbc://@localhost/MultiAssetResearch?d
 & "C:\Users\hp\portfolio-env\Scripts\python.exe" -m multi_asset.database
 ```
 
-`TrustServerCertificate=yes` is for the local development instance's self-signed certificate. Use a trusted certificate for a deployed server. The loader creates schema/tables, stages data, merges by primary keys and checks exact counts before committing. It does not truncate or delete tables. Existing surplus rows cause rollback; inspect them rather than deleting data blindly. Use a separate database for a different study configuration.
+`TrustServerCertificate=yes` is for the local development instance's self-signed certificate. Use a trusted certificate for a deployed server. The loader creates schema/tables, stages data, merges by primary keys and checks exact counts **and every stored cell value** before committing. It does not truncate or delete tables. Existing surplus rows cause rollback; inspect them rather than deleting data blindly. Use a separate database for a different study configuration.
 
 Run the loader a second time to confirm idempotence. Both runs must report the same counts. Then run `sql/02_analytics.sql` in the current `MultiAssetResearch` connection. The weight and look-ahead checks should return **no rows**.
 
@@ -80,6 +82,16 @@ Run the loader a second time to confirm idempotence. Both runs must report the s
 | factor_coefficients | 8 |
 | rate_sensitivity | 4 |
 | volatility_scores | 4 |
+
+Produce the two evidence reports against the same connection (PowerShell keeps `$env:` per window, so re-set it in a new one):
+
+```powershell
+& "C:\Users\hp\portfolio-env\Scripts\python.exe" -m multi_asset.reconcile --output reports/reconciliation
+& "C:\Users\hp\portfolio-env\Scripts\python.exe" -m multi_asset.evidence
+sqlcmd -S localhost -E -C -i sql\03_stale_price_diagnostics.sql
+```
+
+`multi_asset.reconcile` compares every loaded table with the frame it came from, keyed and column by column, and writes `summary.json` plus `mismatches.csv`. `multi_asset.evidence` traces three metrics from the provider payload through SQL to the rendered Dash widget and writes `reports/calculation_evidence.md`. The diagnostics script is read-only and reports any instrument whose close has stopped moving.
 
 ## 5. Use SQL Server as the dashboard source
 
@@ -119,6 +131,8 @@ Paste the prompt into your AI tool. Save only its JSON response as `reports/loca
 ```
 
 Passing validates exact facts and types. You must still read the explanations for unsupported conclusions. No AI API key or API integration is required or claimed.
+
+For a worked example of reviewing AI output that does not come from this repository's own validator, see [ai_field_mapping.md](ai_field_mapping.md): a drafted field mapping, the six corrections the catalog forced, and `python scripts/check_field_mapping.py` to re-check them.
 
 ## 8. Maintenance
 

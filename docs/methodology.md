@@ -34,6 +34,8 @@ BOND/AGG and MINT/BIL are investable fund comparisons over January 2014–Decemb
 
 OLS regresses fund excess returns over BIL on comparator excess returns. Annual alpha is 12 times the monthly intercept, with HAC standard errors using three lags. If comparator excess returns have no variation (MINT/BIL), Jensen alpha, beta and alpha p-value are undefined. Raw mean active return and tracking error remain valid. No individual-manager skill claim is made.
 
+Each static policy is compared against itself, so its tracking error is exactly zero and the fitted intercept is floating-point noise. The alpha p-value is therefore nulled whenever tracking error is at or below 1e-12 instead of being reported as a probability; an earlier build published p-values such as 3.7e-7 for a portfolio that cannot differ from its own comparator. The date and the regression that caught it are recorded in [validation.md](validation.md), and `tests/test_research.py::test_identical_benchmark_zero_te` pins the behaviour.
+
 ## Factors and rates
 
 Fund excess returns are contemporaneously regressed on SPY−BIL, IEF−BIL and LQD−IEF. Coefficient intervals use HAC inference. These are ETF factors, not academic Fama–French factors. LQD−IEF is a credit-relative proxy with residual duration and other risks; it is not a pure credit spread factor. Coefficients describe association, not causality.
@@ -49,6 +51,10 @@ Compare persistence, three-month trailing mean, linear regression and Random For
 ## Reproducibility, AI and scope
 
 Every raw payload and normalized file is hashed. Processed-file hashes are checked before CSV dashboard startup and SQL loading. A failed or partial download never substitutes synthetic data. Data revisions can change a future refreshed run; retain your local cache to reproduce a particular run.
+
+Presence and timing are not the only ingestion risk, so a third class of check exists: a ticker whose adjusted close repeats for longer than it ever legitimately did in this study window stops the run. That guard was written after [INC-001](incidents/INC-001-stale-mint-price.md), in which a simulated nine-day frozen MINT series passed every earlier check and reached the published analytics.
+
+Storage is verified rather than assumed. `python -m multi_asset.reconcile` compares every loaded SQL table with the frame it came from, keyed and column by column at 1e-12; the loader runs the same comparison inside its transaction and rolls back on any difference. `python -m multi_asset.evidence` traces three metrics from the provider payload to the rendered dashboard widget, recomputing each stage independently — month-end returns, replayed net returns, a second optimizer for the live weights, and a T-SQL recompute. Field-level definitions and their verification status are in [field_catalog.md](field_catalog.md).
 
 The AI module creates a prompt from computed facts and validates externally supplied JSON for exact keys, types and values. It cannot verify the truth of free-text explanations; human review is mandatory. No API call is implemented or claimed.
 

@@ -1,0 +1,4 @@
+table,key,column,issue,source_value,target_value,abs_diff,tolerance
+daily_prices,"{""date"": ""2025-11-28"", ""ticker"": ""MINT""}",adjusted_close,value_diff,96.9817352294922,96.98173532647394,9.698173641936592e-08,9.79817352294922e-11
+weights,"{""date"": ""2025-12-31"", ""portfolio"": ""Growth Optimized"", ""ticker"": ""GLD""}",<row>,missing_in_target,,,,
+fund_metrics,"{""fund"": ""BOND""}",tracking_error,value_diff,0.0178301153419221,0.017930115341922098,9.99999999999994e-05,1.0178301153419222e-12
