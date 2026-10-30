@@ -38,12 +38,14 @@ Machine: Windows 10.0.26300, x64, 7.5 GB RAM. Interpreter `C:\Users\hp\portfolio
 | Loader into `MultiAssetResearch` (11:11 UTC build) | 12 tables: 10 / 30,390 / 6,042 / 144 / 648 / 4,536 / 6 / 2 / 218 / 8 / 4 / 4 rows |
 | Repeat load, same database | Second transcript byte-identical to the first: same counts, no duplicates |
 | Fresh load into a scratch database | `MultiAssetResearch_Verify` created from nothing at 17:01 UTC; the loader ran `sql/01_schema.sql`, staged, merged and reported the same 12 counts |
-| Column-level reconciliation, clean | **PASS — 49,756 cells, 0 mismatches** at 1e-12 (`reports/reconciliation/summary.json`, target `MultiAssetResearch_Verify@localhost`) |
+| Reload of `MultiAssetResearch` after the p-value fix | 17:26 UTC, 5 minutes. Same 12 counts, in-transaction reconcile **49,756 cells, 0 mismatches**, committed. The three Policy `alpha_pvalue_hac` values became NULL; the three Optimized p-values are unchanged at 0.355893, 0.534625 and 0.0240883 |
+| GitHub Actions on the pushed commit | `Research tests` run #4 on `29a5d84` **success** at 17:17 UTC, Python 3.11 and 3.12, on a checkout with no data cache and no SQL Server. The dispatch-only `Historical integration run` has not been triggered for this commit |
+| Column-level reconciliation, clean | **PASS — 49,756 cells, 0 mismatches** at 1e-12 (`reports/reconciliation/summary.json`, generated 17:27:44 UTC against `MultiAssetResearch@localhost` after the reload above; byte-identical to the scratch-database run except for the target label and timestamp) |
 | Column-level reconciliation, faults injected | `python scripts/injected_fault_demo.py` **caught all 3**: a one-part-per-billion edit to one MINT close, a deleted Growth Optimized GLD weight row, 0.01 added to BOND tracking error. Transaction rolled back; the database was unchanged afterwards |
-| `sql/02_analytics.sql` | Table counts 30,390 / 144 / 648 / 4,536; **0 rows** breaching the fully-invested long-only weight check; **0 rows** with `training_end >= date`; 582 rolling 12-month returns; 2 fund rows |
-| Source-to-screen evidence | **23 of 23 stages PASS** at 17:07 UTC (`reports/calculation_evidence.md`), including the T-SQL recomputes and both Dash modes |
+| `sql/02_analytics.sql` | Re-run on `MultiAssetResearch` at 17:30 UTC after the reload. Table counts 30,390 / 144 / 648 / 4,536; **0 rows** breaching the fully-invested long-only weight check; **0 rows** with `training_end >= date`; 582 rolling 12-month returns; 2 fund rows |
+| Source-to-screen evidence | **23 of 23 stages PASS**, regenerated 17:28 UTC against `MultiAssetResearch` (`reports/calculation_evidence.md`), including the T-SQL recomputes and both Dash modes |
 | Dash CSV mode vs SQL Server mode | Same rendered values: KPI card 7.42%, fund grid tracking error 0.01783, allocation bar SPY 0.3137228895. This is the evidence report calling `portfolio_view` / `fund_view` in each mode, not a visual guess |
-| Stale-feed diagnostics, clean data | `sql/03_stale_price_diagnostics.sql`: 22 repeat runs of 5 days or longer, **all BIL and all within limit**, 0 STALE; the peer-movement and scope queries returned nothing |
+| Stale-feed diagnostics, clean data | `sql/03_stale_price_diagnostics.sql` re-run on `MultiAssetResearch` at 17:33 UTC: 22 repeat runs of 5 days or longer, **all BIL and all within limit**, 0 STALE; the peer-movement and scope queries returned nothing |
 | Stale-feed diagnostics, injected data | Same script on `MultiAssetResearch_Verify` after freezing 9 MINT closes in T-SQL: **1 STALE row** (MINT 2025-11-17 to 2025-11-28, limit 5), 9 of 9 stale days with all 9 peers moving, and 3 scope rows (1 `fund_metrics`, 2 `monthly_returns`, 2 `rolling_fund_metrics` for MINT) |
 | Stale-fault pipeline simulation | `python scripts/stale_price_incident.py`: the pre-existing checks **passed** the frozen series, the new check rejected it, and 7 tables changed materially while 3 moved only by solver noise. See [INC-001](incidents/INC-001-stale-mint-price.md) |
 | Notebook | `python scripts/execute_notebook.py` executed **12 code cells** with a real ipykernel and wrote `reports/local/executed_research.ipynb`. The in-process fallback was not needed on Windows |
@@ -57,7 +59,9 @@ Machine: Windows 10.0.26300, x64, 7.5 GB RAM. Interpreter `C:\Users\hp\portfolio
 
 `analytics.evaluate_funds` now nulls the alpha p-value whenever tracking error is at or below 1e-12, `tests/test_research.py::test_identical_benchmark_zero_te` asserts the null plus `|alpha| < 1e-12` and `beta = 1`, and the pipeline was rerun. The Optimized rows are unchanged to 15 significant figures, and the aggregate figures quoted in `reports/historical_research_brief.md` do not change.
 
-Because the processed CSV changed, the maintainer's `MultiAssetResearch` database no longer matches them until it is reloaded — the loader would roll that reload back rather than let the difference stand, which is why the two committed evidence artifacts above were regenerated against the scratch database built from the current CSVs. Run `python -m multi_asset.database` against `MultiAssetResearch` to bring it in line.
+The p-value fix changed a processed CSV, so the maintainer's `MultiAssetResearch` database no longer matched it. That was closed at 17:26 UTC: `python -m multi_asset.database` reloaded `MultiAssetResearch`, the loader's own in-transaction reconcile passed, and both committed evidence artifacts were regenerated against that database rather than the scratch one. Every value in them is identical to the earlier scratch-database run, which is the point of the comparison — two databases, loaded by different paths from the same CSVs, produce the same evidence.
+
+`MultiAssetResearch_Verify` is kept in place because the two destructive checks (the injected-fault reconciliation and the frozen-MINT diagnostics) ran there and are reproducible only against a database you are willing to write faults into. It is disposable: `DROP DATABASE MultiAssetResearch_Verify;` removes it, and `python -m multi_asset.database` against a freshly created empty database of that name rebuilds it.
 
 ### Windows notes
 
@@ -92,6 +96,6 @@ sqlcmd -S localhost -E -C -i sql/03_stale_price_diagnostics.sql
 
 - A real external AI-generated JSON response fed to `multi_asset.ai_brief`. The validator is unit-tested against hand-written responses only.
 - Rendered browser behaviour on this machine (no Playwright). The Chromium result above is from the Linux run.
-- GitHub Actions for the files added in this pass; CI runs on push, and nothing here has been pushed.
+- The dispatch-only `Historical integration run` workflow (a real download, full pipeline and notebook on a clean runner). `Research tests` passed on the pushed commit; the integration workflow has not been triggered for it.
 - Provider terms beyond what [data_usage_register.md](data_usage_register.md) quotes; several items there are still listed as unknown.
 - Anything after December 2025. The study period is fixed.

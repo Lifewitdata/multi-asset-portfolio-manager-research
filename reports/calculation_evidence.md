@@ -1,6 +1,6 @@
 # Source-to-screen calculation evidence
 
-Generated 2026-10-30 17:07 UTC by `python -m multi_asset.evidence`. SQL source: SQL Server database `MultiAssetResearch_Verify` on `localhost`. Overall: **PASS**.
+Generated 2026-10-30 17:28 UTC by `python -m multi_asset.evidence`. SQL source: SQL Server database `MultiAssetResearch` on `localhost`. Overall: **PASS**.
 
 Each stage compares an expected value with the value actually found at that stage. "Expected" is an independent recompute written in `src/multi_asset/evidence.py` rather than a copy of the pipeline result, except where noted. Tolerances: 1e-12 for values moved between CSV, SQL and Dash; 1e-10 for T-SQL recomputes; 1e-4 for comparing two different optimizers.
 
