@@ -1,0 +1,24 @@
+name: Historical integration run
+on: workflow_dispatch
+permissions:
+  contents: read
+jobs:
+  historical:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m pip install -e ".[dev]"
+      - run: python -m multi_asset.pipeline --download
+      - run: python -m pytest -q
+      - run: python scripts/execute_notebook.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: research-validation
+          path: |
+            reports/local/executive_summary.md
+            reports/local/data_quality.json
+            reports/local/research_facts.json
+          retention-days: 7

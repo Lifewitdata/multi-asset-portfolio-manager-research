@@ -1,0 +1,120 @@
+[
+  {
+    "file": "yahoo_SPY.json",
+    "source": "Yahoo Finance",
+    "series": "SPY",
+    "url": "https://query1.finance.yahoo.com/v8/finance/chart/SPY?period1=1385856000&period2=1767225600&interval=1d&events=div%2Csplits&includeAdjustedClose=true",
+    "sha256": "1c4e780d7a0f6c73ccedb0b45d0a2bd7d27f682e3cac37ab968f0910d497c9cc",
+    "rows": 3039,
+    "retrieved_utc": "2026-10-29T16:26:24.225718+00:00"
+  },
+  {
+    "file": "yahoo_EFA.json",
+    "source": "Yahoo Finance",
+    "series": "EFA",
+    "url": "https://query1.finance.yahoo.com/v8/finance/chart/EFA?period1=1385856000&period2=1767225600&interval=1d&events=div%2Csplits&includeAdjustedClose=true",
+    "sha256": "e9645e24dde35c0c496fdf093db7bdef6e4f88b93b0d6f7fdc84733a0452fc1d",
+    "rows": 3039,
+    "retrieved_utc": "2026-10-29T16:26:31.308770+00:00"
+  },
+  {
+    "file": "yahoo_EEM.json",
+    "source": "Yahoo Finance",
+    "series": "EEM",
+    "url": "https://query1.finance.yahoo.com/v8/finance/chart/EEM?period1=1385856000&period2=1767225600&interval=1d&events=div%2Csplits&includeAdjustedClose=true",
+    "sha256": "88e0e91658267f42102c48bd93476d002722937debf1178beb81d259bd124bad",
+    "rows": 3039,
+    "retrieved_utc": "2026-10-29T16:26:38.496957+00:00"
+  },
+  {
+    "file": "yahoo_IEF.json",
+    "source": "Yahoo Finance",
+    "series": "IEF",
+    "url": "https://query1.finance.yahoo.com/v8/finance/chart/IEF?period1=1385856000&period2=1767225600&interval=1d&events=div%2Csplits&includeAdjustedClose=true",
+    "sha256": "faaf0988a7b0d2a78c540e5ed517e43593d260d56fde510b1fd1bb1e07e9d110",
+    "rows": 3039,
+    "retrieved_utc": "2026-10-29T16:26:45.496565+00:00"
+  },
+  {
+    "file": "yahoo_LQD.json",
+    "source": "Yahoo Finance",
+    "series": "LQD",
+    "url": "https://query1.finance.yahoo.com/v8/finance/chart/LQD?period1=1385856000&period2=1767225600&interval=1d&events=div%2Csplits&includeAdjustedClose=true",
+    "sha256": "2d5b8a5cdf9d7af5e7b23433587e892c81e6989403fcc4a05b9b1be12cf6cf89",
+    "rows": 3039,
+    "retrieved_utc": "2026-10-29T16:26:52.546490+00:00"
+  },
+  {
+    "file": "yahoo_GLD.json",
+    "source": "Yahoo Finance",
+    "series": "GLD",
+    "url": "https://query1.finance.yahoo.com/v8/finance/chart/GLD?period1=1385856000&period2=1767225600&interval=1d&events=div%2Csplits&includeAdjustedClose=true",
+    "sha256": "870416a3ed4e5768ae9b3a1eaf5b979db61c1a0808c09920a83c2fa269bd49fd",
+    "rows": 3039,
+    "retrieved_utc": "2026-10-29T16:26:59.471745+00:00"
+  },
+  {
+    "file": "yahoo_BIL.json",
+    "source": "Yahoo Finance",
+    "series": "BIL",
+    "url": "https://query1.finance.yahoo.com/v8/finance/chart/BIL?period1=1385856000&period2=1767225600&interval=1d&events=div%2Csplits&includeAdjustedClose=true",
+    "sha256": "477f21a48249cc0b6607af2acc62173a7adb771e6f1736581ca0aeea481781c6",
+    "rows": 3039,
+    "retrieved_utc": "2026-10-29T16:27:06.489662+00:00"
+  },
+  {
+    "file": "yahoo_AGG.json",
+    "source": "Yahoo Finance",
+    "series": "AGG",
+    "url": "https://query1.finance.yahoo.com/v8/finance/chart/AGG?period1=1385856000&period2=1767225600&interval=1d&events=div%2Csplits&includeAdjustedClose=true",
+    "sha256": "7e139ca0dbd68d74d4d76b81b19d8feb67187732107df65d125fd373f88927eb",
+    "rows": 3039,
+    "retrieved_utc": "2026-10-29T16:27:13.594526+00:00"
+  },
+  {
+    "file": "yahoo_BOND.json",
+    "source": "Yahoo Finance",
+    "series": "BOND",
+    "url": "https://query1.finance.yahoo.com/v8/finance/chart/BOND?period1=1385856000&period2=1767225600&interval=1d&events=div%2Csplits&includeAdjustedClose=true",
+    "sha256": "961a90425addfa0a6dae5c9aae91c6e4549fb4eb5f8c063377fe94ce3671bd2e",
+    "rows": 3039,
+    "retrieved_utc": "2026-10-29T16:27:20.552541+00:00"
+  },
+  {
+    "file": "yahoo_MINT.json",
+    "source": "Yahoo Finance",
+    "series": "MINT",
+    "url": "https://query1.finance.yahoo.com/v8/finance/chart/MINT?period1=1385856000&period2=1767225600&interval=1d&events=div%2Csplits&includeAdjustedClose=true",
+    "sha256": "60305d0610a447366e0ad7125d6df60bd8f61cdccce8bab8b9e722b2f6def15e",
+    "rows": 3039,
+    "retrieved_utc": "2026-10-29T16:27:27.847965+00:00"
+  },
+  {
+    "file": "fred_DGS10.csv",
+    "source": "Federal Reserve Board via FRED",
+    "series": "DGS10",
+    "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DGS10&cosd=2013-12-01&coed=2025-12-31",
+    "sha256": "db658eb5fd1b0fef462282bf58487c8b5fed7ad752fc7e623f46a9de4bcca2bb",
+    "rows": 3021,
+    "retrieved_utc": "2026-10-29T16:27:35.582899+00:00"
+  },
+  {
+    "file": "fred_DGS2.csv",
+    "source": "Federal Reserve Board via FRED",
+    "series": "DGS2",
+    "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DGS2&cosd=2013-12-01&coed=2025-12-31",
+    "sha256": "d65a4ec107088cddca2c92a2da6ed07cfc9d6e7c26786d02dd57d8f51032c19b",
+    "rows": 3021,
+    "retrieved_utc": "2026-10-29T16:27:43.542614+00:00"
+  },
+  {
+    "file": "prices.csv",
+    "source": "normalized downloaded data",
+    "sha256": "11c37362a9e93b801658d487fe5e726044c992470cf231c5bfaa0cdfb4ec638b"
+  },
+  {
+    "file": "macro.csv",
+    "source": "normalized downloaded data",
+    "sha256": "2abf75ec2b29f448b1c3d76af7d36a16f21bdf30622c891f793e9be02d404351"
+  }
+]

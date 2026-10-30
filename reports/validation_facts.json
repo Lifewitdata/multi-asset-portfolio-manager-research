@@ -1,0 +1,11 @@
+{
+  "data_type": "real_historical",
+  "instruments": 10,
+  "daily_price_rows": 30390,
+  "monthly_return_rows": 144,
+  "backtest_months": 108,
+  "return_start": "2014-01-31",
+  "return_end": "2025-12-31",
+  "best_volatility_model_by_mae": "Random forest",
+  "forecast_months": 97
+}
