@@ -19,7 +19,7 @@ from multi_asset.database import KEYS
 from multi_asset.reconcile import compare
 
 TICKER, FROZEN_FROM, FREEZE_START, FREEZE_END = "MINT", "2025-11-14", "2025-11-17", "2025-11-28"
-OUT = ROOT/"reports/incidents"
+OUT = ROOT/"reports/local/incidents"
 TABLE_KEYS = {**KEYS, "monthly_prices":["date"], "monthly_macro":["date"], "volatility_predictions":["date","model"]}
 # Portfolio tables use only the 7 investable ETFs, whose inputs stay bitwise identical, yet
 # CVXPY/CLARABEL output moves by up to ~6e-10 (back to 2017) when other columns change.

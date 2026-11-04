@@ -6,7 +6,7 @@
 |---|---|
 | Incident class | Silent data-quality fault — repeated (frozen) price observations |
 | Instrument | `MINT` (PIMCO Enhanced Short Maturity Active ETF, one of the two active funds) |
-| Fault window | 2025-11-17 to 2025-11-28, 9 trading days, close frozen at `96.82756042480467` (the 2025-11-14 value) |
+| Fault window | 2025-11-17 to 2025-11-28, 9 trading days, close frozen at `[withheld]` (the 2025-11-14 value) |
 | Detected by | Manual inspection only, before the fix |
 | Detected by | `multi_asset.data.check_unchanged_runs`, after the fix |
 | Owner | Research maintainer (`Lifewitdata`), who also acts as market-data owner for this repository |
@@ -41,14 +41,14 @@ $env:PYTHONIOENCODING = "utf-8"
 & "C:\Users\hp\portfolio-env\Scripts\python.exe" scripts\stale_price_incident.py
 ```
 
-The script copies `data/raw/` twice into temporary directories — a control copy and an injected copy — rewrites the injected `prices.csv` and its manifest checksum, then runs the full pipeline on both and reconciles all 15 output tables cell by cell. It writes `reports/incidents/stale_price_scope.csv`, `stale_price_changed_cells.csv` and `stale_price_simulation.json`. Nothing under `data/` or `data/processed/` is touched.
+The script copies `data/raw/` twice into temporary directories — a control copy and an injected copy — rewrites the injected `prices.csv` and its manifest checksum, then runs the full pipeline on both and reconciles all 15 output tables cell by cell. It writes `reports/local/incidents/stale_price_scope.csv`, `stale_price_changed_cells.csv` and `stale_price_simulation.json`. Nothing under `data/` or `data/processed/` is touched.
 
 Old check versus new check, on the same injected file:
 
 ```text
 checks_before_fix : PASS  checksums, duplicate keys, full cross-section,
                           positive finite prices, month-end gap <= 7 days
-check_after_fix   : REJECTED  Possible stale feed: MINT close 96.82756042480467
+check_after_fix   : REJECTED  Possible stale feed: MINT close [withheld]
                           repeated for 9 trading days (2025-11-17 to 2025-11-28);
                           1 run(s) over limit. See docs/incidents/
 ```
@@ -79,8 +79,8 @@ frozen_rows
 
 -- query 1 (repeat runs)
 ticker|first_repeat|last_repeat|repeated_days|limit_days|repeated_close       |status
-MINT  |2025-11-17  |2025-11-28 |9            |5         |96.827560424804673   |STALE
-BIL   |2015-10-06  |2015-10-19 |10           |15        |72.762916564941406   |within limit
+MINT  |2025-11-17  |2025-11-28 |9            |5         |[withheld]   |STALE
+BIL   |2015-10-06  |2015-10-19 |10           |15        |[withheld]   |within limit
 ... 22 further BIL rows, all within limit
 
 -- query 2 (did peers move?)

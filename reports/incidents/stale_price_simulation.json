@@ -1,24 +1,12 @@
 {
   "simulated": true,
   "ticker": "MINT",
-  "frozen_close": 96.82756042480467,
   "frozen_from": "2025-11-14",
   "freeze_start": "2025-11-17",
   "freeze_end": "2025-11-28",
   "frozen_rows": 9,
-  "true_closes": {
-    "2025-11-17": 96.83721923828124,
-    "2025-11-18": 96.86611938476562,
-    "2025-11-19": 96.8564682006836,
-    "2025-11-20": 96.8564682006836,
-    "2025-11-21": 96.90464782714844,
-    "2025-11-24": 96.9239273071289,
-    "2025-11-25": 96.93356323242188,
-    "2025-11-26": 96.97210693359376,
-    "2025-11-28": 96.9817352294922
-  },
   "checks_before_fix": "PASS: checksums, duplicate keys, full cross-section, positive finite prices, month-end gap <= 7 days",
-  "check_after_fix": "REJECTED: Possible stale feed: MINT close 96.82756042480467 repeated for 9 trading days (2025-11-17 to 2025-11-28); 1 run(s) over limit. See docs/incidents/",
+  "check_after_fix": "REJECTED: Possible stale feed: MINT repeated for 9 trading days (2025-11-17 to 2025-11-28); 1 run(s) over limit.",
   "longest_runs": {
     "AGG": 2,
     "BIL": 10,
@@ -78,5 +66,6 @@
     "volatility_scores",
     "monthly_macro",
     "volatility_predictions"
-  ]
+  ],
+  "publication_note": "Individual provider observations withheld; reproduce full detail in reports/local/incidents."
 }

@@ -33,9 +33,11 @@ A Python, SQL Server and Dash research project using **real historical prices** 
 | Time series / ML | Walk-forward OLS and Random Forest volatility forecasts compared with persistence and trailing-mean baselines |
 | Dash | Portfolio and fund selectors, performance and drawdown charts, factor confidence intervals, sortable tables and a constrained allocation sandbox |
 | Reports / AI | Generated executive report, quality audit and facts JSON; manual AI prompt with exact-key/type/value validation |
-| Maintenance | Cached reproducible runs, explicit re-download, PowerShell refresh script, unit CI and manual historical integration workflow |
+| Maintenance | Cached reproducible runs, explicit re-download, PowerShell refresh script, unit CI, automatic SQL Server synthetic integration and manual historical integration workflow |
 
 ## Quick start
+
+Review [source usage restrictions](docs/data_usage_register.md) before downloading or sharing data. The supplied sources have unresolved permissions; automatic SQL integration uses synthetic rows.
 
 Python 3.11 or 3.12 is recommended. Run commands from the extracted/cloned repository root.
 
