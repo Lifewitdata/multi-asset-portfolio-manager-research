@@ -4,6 +4,7 @@ Each metric is traced from hash-verified raw observations, through an independen
 recompute, the pipeline CSV, SQL Server (stored value plus a T-SQL recompute) and
 the value the Dash callback actually renders.
 """
+from pathlib import Path
 import argparse
 import os
 from contextlib import contextmanager
@@ -23,7 +24,7 @@ WEIGHT_TICKER = "SPY"
 EXACT = 1e-12      # same IEEE doubles moved between CSV, SQL and Dash
 TSQL = 1e-10       # T-SQL LOG/EXP/STDEV evaluate in a different order
 SOLVER = 1e-4      # two different QP solvers on the same covariance
-REPORT = ROOT/"reports/calculation_evidence.md"
+REPORT = ROOT/"reports/local/calculation_evidence.md"
 
 def month_end(prices):
     """Last observation per calendar month, written without resample() so it is independent of data.monthly_prices."""
@@ -275,6 +276,7 @@ def main():
     finally:
         if sql is not None:
             sql.dispose()
+    Path(args.output).parent.mkdir(parents=True, exist_ok=True)
     with open(args.output, "w", encoding="utf-8", newline="\n") as handle:
         handle.write(render(rows, samples, last_dates, raw, independent, label))
     for r in rows:

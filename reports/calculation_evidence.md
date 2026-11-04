@@ -32,14 +32,7 @@ Raw inputs were verified against `data/raw/manifest.json` before anything was re
 | 7 Dash KPI card, CSV mode | portfolio_view 'Net CAGR' | 7.42% | 7.42% | 0 | 0 | PASS |
 | 8 Dash KPI card, SQL mode | portfolio_view 'Net CAGR' | 7.42% | 7.42% | 0 | 0 | PASS |
 
-Month-end adjusted closes used (last trading day of each month; Yahoo adjusted close, USD):
-
-| Month end | SPY | EFA | EEM | IEF | LQD | GLD | BIL |
-|---|---:|---:|---:|---:|---:|---:|---:|
-| 2013-12-31 | 149.2619 (12-31) | 46.1416 (12-31) | 31.8446 (12-31) | 74.3114 (12-31) | 72.8462 (12-31) | 116.1200 (12-31) | 72.8904 (12-31) |
-| 2014-01-31 | 144.0006 (01-31) | 43.7417 (01-31) | 29.0944 (01-31) | 76.5877 (01-31) | 74.2177 (01-31) | 120.0900 (01-31) | 72.8904 (01-31) |
-| 2025-11-30 | 676.0958 (11-28) | 92.0393 (11-28) | 53.2767 (11-28) | 94.0458 (11-28) | 107.1636 (11-28) | 387.8800 (11-28) | 88.7134 (11-28) |
-| 2025-12-31 | 676.6350 (12-31) | 94.5340 (12-31) | 54.4271 (12-31) | 93.3299 (12-31) | 106.3733 (12-31) | 396.3100 (12-31) | 89.0108 (12-31) |
+Individual input observations are withheld pending usage-rights review. Reproduce locally with `python -m multi_asset.evidence`.
 
 ## B. BOND tracking error vs AGG
 
@@ -53,14 +46,7 @@ Month-end adjusted closes used (last trading day of each month; Yahoo adjusted c
 | 6 Dash fund table, CSV mode | fund_view grid, rounded to 5 dp | 0.01783 | 0.01783 | 0 | 1.000e-12 | PASS |
 | 7 Dash fund table, SQL mode | fund_view grid, rounded to 5 dp | 0.01783 | 0.01783 | 0 | 1.000e-12 | PASS |
 
-Month-end adjusted closes used (last trading day of each month; Yahoo adjusted close, USD):
-
-| Month end | BOND | AGG |
-|---|---:|---:|
-| 2013-12-31 | 65.4125 (12-31) | 74.8180 (12-31) |
-| 2014-01-31 | 66.4368 (01-31) | 75.9708 (01-31) |
-| 2025-11-30 | 89.6413 (11-28) | 97.1714 (11-28) |
-| 2025-12-31 | 89.5542 (12-31) | 96.9003 (12-31) |
+Individual input observations are withheld pending usage-rights review. Reproduce locally with `python -m multi_asset.evidence`.
 
 ## C. Balanced Optimized last-rebalance SPY weight
 
@@ -75,13 +61,7 @@ Month-end adjusted closes used (last trading day of each month; Yahoo adjusted c
 | 6 Dash allocation bar, CSV mode | portfolio_view allocation trace 'SPY' | 0.3137228895 | 0.3137228895 | 0 | 1.000e-12 | PASS |
 | 7 Dash allocation bar, SQL mode | portfolio_view allocation trace 'SPY' | 0.3137228895 | 0.3137228895 | 0 | 1.000e-12 | PASS |
 
-Month-end adjusted closes used (last trading day of each month; Yahoo adjusted close, USD):
-
-| Month end | SPY | EFA | EEM | IEF | LQD | GLD | BIL |
-|---|---:|---:|---:|---:|---:|---:|---:|
-| 2022-11-30 | 387.0740 (11-30) | 59.7510 (11-30) | 35.9628 (11-30) | 85.1525 (11-30) | 90.7553 (11-30) | 164.8100 (11-30) | 77.1392 (11-30) |
-| 2022-12-31 | 364.7676 (12-30) | 58.6677 (12-30) | 35.0143 (12-30) | 83.8853 (12-30) | 89.3476 (12-30) | 169.6400 (12-30) | 77.4189 (12-30) |
-| 2025-11-30 | 676.0958 (11-28) | 92.0393 (11-28) | 53.2767 (11-28) | 94.0458 (11-28) | 107.1636 (11-28) | 387.8800 (11-28) | 88.7134 (11-28) |
+Individual input observations are withheld pending usage-rights review. Reproduce locally with `python -m multi_asset.evidence`.
 
 Full SLSQP solution for the last rebalance: SPY 31.3724%, EFA 18.5843%, EEM 5.0433%, IEF 20.0000%, LQD 0.0000%, GLD 10.0000%, BIL 15.0000%.
 
@@ -93,4 +73,4 @@ Full SLSQP solution for the last rebalance: SPY 31.3724%, EFA 18.5843%, EEM 5.04
 - Dash stages call the real callback functions (`portfolio_view`, `fund_view`) and read the rendered value: the KPI card text, the grid cell and the bar height.
 - NOT RUN means `MULTI_ASSET_SQLSERVER_URL` was not set when the report was generated.
 
-Prices quoted above are a handful of illustrative observations from the provider; see `docs/data_usage_register.md`.
+Individual prices are omitted from this public summary; see `docs/data_usage_register.md`.

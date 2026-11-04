@@ -38,18 +38,37 @@ def catalog_rows():
     return {(r["dataset"], r["field"]): r for r in frame.to_dict("records")}
 
 
-def draft_proposals():
+def draft_record():
     for block in re.findall(r"```json\n(.*?)\n```", DOC.read_text(encoding="utf-8"), flags=re.DOTALL):
         if '"proposals"' in block:
-            return json.loads(block)["proposals"]
+            return json.loads(block)
     raise ValueError(f"No JSON proposal block found in {DOC.name}")
+
+
+def draft_proposals():
+    return draft_record()["proposals"]
+
+
+def review_problems(review):
+    if not isinstance(review, dict) or review.get("approval") not in {"pending maintainer sign-off", "approved"}:
+        return ["Review must explicitly record pending maintainer sign-off or approved"]
+    if review["approval"] == "approved":
+        required = ("reviewer", "approved_date", "scope", "evidence")
+        if any(not str(review.get(k) or "").strip() for k in required):
+            return ["Approved review requires reviewer, approved_date, scope and evidence"]
+        try:
+            from datetime import date
+            date.fromisoformat(review["approved_date"])
+        except (ValueError, TypeError):
+            return ["approved_date must be an ISO calendar date"]
+    return []
 
 
 def agrees(proposed, authoritative, exact):
     proposed, authoritative = normalise(proposed), normalise(authoritative)
-    if not proposed:
+    if not proposed or not authoritative:
         return False
-    return proposed == authoritative if exact else proposed in authoritative or authoritative in proposed
+    return proposed == authoritative if exact else proposed in authoritative
 
 
 def evaluate(proposal, reference):
@@ -62,7 +81,7 @@ def evaluate(proposal, reference):
 
 
 def check():
-    references, problems, rows = catalog_rows(), [], []
+    references, problems, rows = catalog_rows(), review_problems(draft_record().get("review")), []
     for proposal in draft_proposals():
         reference = references.get((proposal["dataset"], proposal["field"]))
         verdict, mismatches = evaluate(proposal, reference)
@@ -100,7 +119,7 @@ def main():
         for problem in problems:
             print(f"PROBLEM: {problem}", file=sys.stderr)
         raise SystemExit(1)
-    print("Review matches the catalog.")
+    print("Machine comparison matches the catalog. Human approval: " + draft_record()["review"]["approval"])
 
 
 if __name__ == "__main__":

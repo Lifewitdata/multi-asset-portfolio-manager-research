@@ -27,6 +27,10 @@ def _key_text(row, keys):
 
 def compare(table, source, target, keys, abs_tol=ABS_TOL, rel_tol=REL_TOL):
     """Return (summary dict, mismatch DataFrame) for one table."""
+    if not keys or any(k not in source or k not in target for k in keys):
+        raise ValueError(f"{table}: all reconciliation keys must exist on both sides")
+    if source[keys].isna().any().any() or target[keys].isna().any().any():
+        raise ValueError(f"{table}: null reconciliation keys")
     issues = []
     source_cols, target_cols = list(source.columns), list(target.columns)
     for column in source_cols:
@@ -89,16 +93,18 @@ def reconcile(frames, read_table, keys):
     return summaries, pd.concat(found, ignore_index=True) if found else pd.DataFrame(columns=MISMATCH_COLUMNS)
 
 
-def export(summaries, mismatches, folder=None, label="sqlserver"):
+def export(summaries, mismatches, folder=None, label="sqlserver", prefix=""):
+    if prefix not in {"", "injected_fault_"}:
+        raise ValueError("Unsupported report prefix")
     folder = Path(folder or ROOT/"reports/local/reconciliation")
     folder.mkdir(parents=True, exist_ok=True)
-    mismatches.to_csv(folder/"mismatches.csv", index=False, lineterminator="\n")
+    mismatches.to_csv(folder/f"{prefix}mismatches.csv", index=False, lineterminator="\n")
     report = {"generated_utc": datetime.now(timezone.utc).isoformat(timespec="seconds"), "target": label,
               "abs_tolerance": ABS_TOL, "rel_tolerance": REL_TOL,
               "tables": summaries, "total_cells_compared": sum(s["cells_compared"] for s in summaries),
               "total_mismatches": int(len(mismatches)),
               "status": "PASS" if mismatches.empty else "FAIL"}
-    with (folder/"summary.json").open("w", encoding="utf-8", newline="\n") as handle:
+    with (folder/f"{prefix}summary.json").open("w", encoding="utf-8", newline="\n") as handle:
         json.dump(report, handle, indent=2, default=str)
     return report
 

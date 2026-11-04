@@ -41,7 +41,7 @@ Machine: Windows 10.0.26300, x64, 7.5 GB RAM. Interpreter `C:\Users\hp\portfolio
 | Reload of `MultiAssetResearch` after the p-value fix | 17:26 UTC, 5 minutes. Same 12 counts, in-transaction reconcile **49,756 cells, 0 mismatches**, committed. The three Policy `alpha_pvalue_hac` values became NULL; the three Optimized p-values are unchanged at 0.355893, 0.534625 and 0.0240883 |
 | GitHub Actions on the pushed commit | `Research tests` run #4 on `29a5d84` **success** at 17:17 UTC, Python 3.11 and 3.12, on a checkout with no data cache and no SQL Server. The dispatch-only `Historical integration run` has not been triggered for this commit |
 | Column-level reconciliation, clean | **PASS — 49,756 cells, 0 mismatches** at 1e-12 (`reports/reconciliation/summary.json`, generated 17:27:44 UTC against `MultiAssetResearch@localhost` after the reload above; byte-identical to the scratch-database run except for the target label and timestamp) |
-| Column-level reconciliation, faults injected | `python scripts/injected_fault_demo.py` **caught all 3**: a one-part-per-billion edit to one MINT close, a deleted Growth Optimized GLD weight row, 0.01 added to BOND tracking error. Transaction rolled back; the database was unchanged afterwards |
+| Column-level reconciliation, faults injected | `python scripts/injected_fault_demo.py` **caught all 3**: a one-part-per-billion edit to one MINT close, a deleted Growth Optimized GLD weight row, 0.0001 added to BOND tracking error. Transaction rolled back; the database was unchanged afterwards |
 | `sql/02_analytics.sql` | Re-run on `MultiAssetResearch` at 17:30 UTC after the reload. Table counts 30,390 / 144 / 648 / 4,536; **0 rows** breaching the fully-invested long-only weight check; **0 rows** with `training_end >= date`; 582 rolling 12-month returns; 2 fund rows |
 | Source-to-screen evidence | **23 of 23 stages PASS**, regenerated 17:28 UTC against `MultiAssetResearch` (`reports/calculation_evidence.md`), including the T-SQL recomputes and both Dash modes |
 | Dash CSV mode vs SQL Server mode | Same rendered values: KPI card 7.42%, fund grid tracking error 0.01783, allocation bar SPY 0.3137228895. This is the evidence report calling `portfolio_view` / `fund_view` in each mode, not a visual guess |
@@ -99,3 +99,30 @@ sqlcmd -S localhost -E -C -i sql/03_stale_price_diagnostics.sql
 - The dispatch-only `Historical integration run` workflow (a real download, full pipeline and notebook on a clean runner). `Research tests` passed on the pushed commit; the integration workflow has not been triggered for it.
 - Provider terms beyond what [data_usage_register.md](data_usage_register.md) quotes; several items there are still listed as unknown.
 - Anything after December 2025. The study period is fixed.
+
+## Follow-up validation (2026-11-04)
+
+- Added `SQL Server synthetic integration` on every push/PR: all 12 SQL tables,
+  nullable values, repeat MERGE, dashboard reads, failed-constraint rollback and
+  staging-table cleanup. Its rows are explicitly synthetic; this is database
+  integration evidence, not a fresh historical-data run.
+- Local suite: 115 passed; the SQL Server test skips without
+  `MULTI_ASSET_SQLSERVER_TEST_URL`. Use only a disposable empty database for it.
+- The fault demo writes `injected_fault_*` directly, preserving clean reports.
+  Missing/null reconciliation keys now fail with an explicit error.
+- Full calculation evidence and incident details now default to `reports/local/`.
+  Public historical summaries omit individual prices and mismatch values. They
+  retain the original run's results, not a claim that historical data was rerun.
+- Mapping comparison now rejects contradictory extensions and missing approval
+  metadata. Pending human approval is valid as a draft, never as sign-off.
+
+### Remaining external evidence
+
+| Item | Owner | Completion evidence |
+|---|---|---|
+| Human review of ten AI mappings | Research maintainer | Set review approval to `approved`, with `reviewer`, ISO `approved_date`, `scope` and `evidence`; cite actual source/code review and any exclusions |
+| Vendor usage rights | Research maintainer | Written licence or permission covering acquisition, display and redistribution; update the usage register |
+| Fresh historical integration | Research maintainer | After resolving acquisition rights, run the manual workflow and link its successful run here; SQL coverage is separately exercised by synthetic CI |
+
+Earlier Git revisions still contain removed observations. No history rewrite was
+performed. Aggregate output rights also remain subject to the usage review.

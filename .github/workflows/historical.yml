@@ -1,9 +1,17 @@
 name: Historical integration run
-on: workflow_dispatch
+on:
+  workflow_dispatch:
+    inputs:
+      source_rights_confirmed:
+        description: 'I have confirmed permission for this acquisition and artifact use (see data usage register)'
+        required: true
+        type: boolean
+        default: false
 permissions:
   contents: read
 jobs:
   historical:
+    if: ${{ inputs.source_rights_confirmed }}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4

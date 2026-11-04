@@ -1,6 +1,6 @@
 # AI-assisted field mapping — worked example, reviewed
 
-This records one concrete AI-assisted step in building [field_catalog.csv](file:///C:/Users/hp/Documents/Qoder/2026-10-30/3b436995/repo/docs/field_catalog.csv): drafting the raw-field mapping for the provider payloads. It exists because "I used AI" is not evidence — the draft, the corrections, the machine check and the approval state are.
+This records one concrete AI-assisted step in building [field_catalog.csv](field_catalog.csv): drafting the raw-field mapping for the provider payloads. It exists because "I used AI" is not evidence — the draft, the corrections, the machine check and the approval state are.
 
 | Field | Value |
 |---|---|
@@ -185,7 +185,7 @@ Review matches the catalog.
 
 ## What the draft got wrong, and why it matters
 
-- **P-03 is the dangerous one.** `quote[0].close` is the unadjusted close. Mapping the stored column to it would have left the code and the catalog agreeing on a *number that is not what the pipeline computes* — distributions and splits would vanish from fund and ETF returns, and the cache would still hash correctly. `parse_yahoo` reads `adjclose[0].adjclose` and requests it explicitly, and [data_sources.md](file:///C:/Users/hp/Documents/Qoder/2026-10-30/3b436995/repo/docs/data_sources.md) records that unadjusted close is never substituted.
+- **P-03 is the dangerous one.** `quote[0].close` is the unadjusted close. Mapping the stored column to it would have left the code and the catalog agreeing on a *number that is not what the pipeline computes* — distributions and splits would vanish from fund and ETF returns, and the cache would still hash correctly. `parse_yahoo` reads `adjclose[0].adjclose` and requests it explicitly, and [data_sources.md](data_sources.md) records that unadjusted close is never substituted.
 - **P-06 changes the meaning of a headline metric.** Percent-per annum read as a decimal monthly change is a scale error of roughly 1200x, and it would have made `return_per_1pp_yield_change` nonsense. The catalog and `analytics.factor_research()` both keep yields in percent.
 - **P-04 and P-06 both invented null handling.** The draft assumed forward filling; the pipeline drops blank FRED rows and raises if a study month is missing. Filling silently would have manufactured zero changes out of market closures.
 - **P-02 and P-05 attributed fields to the payload that the payload does not carry.** `fredgraph.csv` has no series column at all, and the ticker column is stamped from the request. Both would have made the catalog describe a parse that does not exist.
@@ -212,3 +212,9 @@ The catalog rows and the code agree, and the check passes, but approval is a hum
 ## Limits of this example
 
 One prompt, one payload family, ten fields. It demonstrates the review loop, not coverage of all 118 catalog rows, and the assistant that drafted the mapping also ran the review — an independent human pass is exactly what is still missing.
+
+To record an actual approval, change `review.approval` to `approved` and add
+`reviewer`, `approved_date` (YYYY-MM-DD), `scope`, and `evidence` to the review
+object. The evidence should identify the source payload/code checks performed and
+any exclusions. The checker validates the record's structure; it cannot certify
+that a person performed that review. Until then leave the status pending.

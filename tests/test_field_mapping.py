@@ -90,3 +90,16 @@ def test_missing_correction_text_is_a_problem():
 
 def test_normalise_maps_typographic_dashes_and_spaces():
     assert checker.normalise("  std(r \u2013 comparator,\u00a0 ddof=1)\n") == "std(r - comparator, ddof=1)"
+
+
+def test_contradictory_extension_does_not_pass():
+    assert not checker.agrees('Never null except when missing', 'Never null', exact=False)
+    assert not checker.agrees('anything', '', exact=False)
+
+
+def test_approval_requires_explicit_evidence():
+    assert checker.review_problems(None)
+    assert checker.review_problems({'approval': 'approved'})
+    assert checker.review_problems({'approval': 'pending maintainer sign-off'}) == []
+    assert checker.review_problems({'approval': 'approved', 'reviewer': 'maintainer',
+        'approved_date': 'invalid', 'scope': 'ten fields', 'evidence': 'review record'})
